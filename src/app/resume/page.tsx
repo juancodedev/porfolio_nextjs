@@ -14,26 +14,26 @@ import {
 
 const about = {
     title: "About Me",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel ipsum euismod, bibendum lectus eget, posuere ligula. Sed vel libero non neque gravida lobortis. Sed aliquet, ipsum eget tincidunt interdum, dui felis gravida neque, at fermentum lectus eros vel nulla.",
+    description: "Professional with more than 19 years of experience in the IT area, currently systems developer, highly motivated and eager to grow. developer, highly motivated and eager to grow. I am a resolute, dynamic professional with a great interest in the development of great interest in the development of innovative solutions through the use of technologies. great capacity for the diagnosis and resolution of incidents, able to assume responsibilities and make assertive decisions. assertive decisions, I also have a great capacity to learn and apply my knowledge to the professional field. to learn and apply my knowledge to the professional environment.",
     info: [
         {
             fieldName: "Name",
-            fieldValue: "Ahmed Elsayed",
+            fieldValue: "Juan Muñoz.",
         }, {
             fieldName: "Phone",
-            fieldValue: "(56 9) 123 456 78",
+            fieldValue: "(56 9) 983 077 78",
         }, {
             fieldName: "Experience",
-            fieldValue: "2 Years",
-        }, {
-            fieldName: "Skype",
-            fieldValue: "skype.demo",
+            fieldValue: "+2 Years",
+        // }, {
+        //     fieldName: "Skype",
+        //     fieldValue: "skype.demo",
         }, {
             fieldName: "Nationality",
             fieldValue: "Chilean",
         }, {
             fieldName: "Email",
-            fieldValue: "correo@correo.com",
+            fieldValue: "cl.jmunoz@gmail.com",
         }, {
             fieldName: "Frelance",
             fieldValue: "Available",
@@ -49,9 +49,9 @@ const experience = {
     title: 'My experience',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel ipsum euismod, bibendum lectus eget, posuere ligula. Sed vel libero non neque gravida lobortis.',
     items: [{
-        company: "company 1",
-        position: "FUll Stack Developer",
-        duration: "2020 - 2022",
+        company: "BST Corp. - Santiago",
+        position: "FUll Stack Developer Jr.",
+        duration: "2021-Dec. -> 2024-Mar.",
     }, {
         company: "company 2",
         position: "FUll Stack Developer",

@@ -11,16 +11,17 @@ const info = [
   {
     icon: <FaPhoneAlt />,
     title: 'Phone',
-    description: '(123) 123 456 789',
+    description: '(+56) 998 307 778 ',
   }, {
     icon: <FaEnvelope />,
     title: 'Email',
-    description: 'correo@correo.com',
-  }, {
-    icon: <FaMapMarkerAlt />,
-    title: 'Address',
-    description: 'Calle siempre viva 1234',
-  },
+    description: 'cl.jmunoz@gmail.com',
+  }, 
+  // {
+  //   icon: <FaMapMarkerAlt />,
+  //   title: 'Address',
+  //   description: 'Calle siempre viva 1234',
+  // },
 ]
 
 const Contact = () => {
@@ -43,7 +44,7 @@ const Contact = () => {
           <form className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
             <h3 className="text-4xl text-accent">Let&apos;s work together</h3>
             <p className="text-white/60">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus possimus obcaecati vel iste in.
+            Let's combine our strengths to create something exceptional. Together, we can turn your ideas into reality, overcome challenges, and achieve your business goals. Reach out, and let's start building something great together.
             </p>
             {/* input */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

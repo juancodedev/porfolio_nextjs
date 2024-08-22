@@ -11,7 +11,7 @@ const socials: SocialItem[] = [
     { icon: <FaGithub />, path: '' },
     { icon: <FaLinkedinIn />, path: '' },
     { icon: <FaYoutube />, path: '' },
-    { icon: <FaTwitter />, path: '' },
+    // { icon: <FaTwitter />, path: '' },
 ]
 
 interface SocialProps {

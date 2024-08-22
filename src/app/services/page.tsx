@@ -7,22 +7,22 @@ const services = [
     {
         num: '01',
         title: 'Web Development',
-        description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit. Eaque tenetur',
+        description: 'I can help transform your online venture with a professional, functional website. With experience in web development and modern technologies, I’ll create a secure, fast, and adaptable platform tailored to your needs. While you focus on your business, I’ll handle the tech.',
         href: ""
     }, {
         num: '02',
         title: 'Backend Developer',
-        description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit. Eaque tenetur',
+        description: 'I’ll develop a robust and scalable backend to support all your business operations. With experience in Python, Java, and AWS, I’ll create efficient and secure solutions, optimizing your system’s performance so you can focus on growing your business.',
         href: ""
     }, {
         num: '03',
-        title: 'Logo Design',
-        description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit. Eaque tenetur',
+        title: 'Systems Integration',
+        description: 'I’ll help you seamlessly integrate your systems and tools, ensuring smooth communication between them. My experience in integration guarantees that your tech infrastructure works in harmony, improving efficiency and reducing costs.',
         href: ""
     }, {
         num: '04',
-        title: 'SEO',
-        description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit. Eaque tenetur',
+        title: 'Technology Consulting',
+        description: 'I offer specialized consulting to help you choose and use the best technologies for your business. Together, we’ll implement solutions that maximize performance and keep you competitive in a constantly evolving market.',
         href: ""
     }
 ]
