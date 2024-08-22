@@ -8,9 +8,9 @@ interface SocialItem {
 }
 
 const socials: SocialItem[] = [
-    { icon: <FaGithub />, path: '' },
-    { icon: <FaLinkedinIn />, path: '' },
-    { icon: <FaYoutube />, path: '' },
+    { icon: <FaGithub />, path: 'https://github.com/juanshocl/' },
+    { icon: <FaLinkedinIn />, path: 'https://www.linkedin.com/in/juanshocl/' },
+    { icon: <FaYoutube />, path: 'https://www.youtube.com/juanshocl' },
     // { icon: <FaTwitter />, path: '' },
 ]
 
@@ -24,7 +24,7 @@ const Social: React.FC<SocialProps> = ({ containerStyles, iconStyles }) => {
         <div className={containerStyles as string}>
             {socials.map((item, index) => {
                 return (
-                    <Link key={index} href={item.path} className={iconStyles as string }>
+                    <Link key={index} href={item.path} className={iconStyles as string } target='blank_'>
                         {item.icon}
                     </Link>
                 );

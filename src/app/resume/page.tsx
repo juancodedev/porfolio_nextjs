@@ -6,10 +6,22 @@ import {
     FaJs,
     FaReact,
     FaFigma,
-    FaNodeJs
+    FaBootstrap,
+    FaPython,
+    FaAws,
+    FaDatabase,
+    FaGitSquare,
 } from "react-icons/fa"
+
+import { BiLogoPostgresql } from "react-icons/bi";
+
+
 import {
-    SiTailwindcss, SiNextdotjs
+    SiTailwindcss, SiNextdotjs,
+    SiTypescript,
+    SiHeroku,
+    SiJira,
+    SiSonarqube
 } from "react-icons/si"
 
 const about = {
@@ -25,9 +37,9 @@ const about = {
         }, {
             fieldName: "Experience",
             fieldValue: "+2 Years",
-        // }, {
-        //     fieldName: "Skype",
-        //     fieldValue: "skype.demo",
+            // }, {
+            //     fieldName: "Skype",
+            //     fieldValue: "skype.demo",
         }, {
             fieldName: "Nationality",
             fieldValue: "Chilean",
@@ -47,84 +59,47 @@ const about = {
 const experience = {
     icon: '/assets/resume/badge.svg',
     title: 'My experience',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel ipsum euismod, bibendum lectus eget, posuere ligula. Sed vel libero non neque gravida lobortis.',
+    description: 'I am a systems developer with over 19 years of IT experience. I specialize in Python, JavaScript, Java and have experience in AWS Services, PostgreSQL and Linux. I am resourceful, dynamic and have a natural ability to learn quickly and adapt to new technologies. I enjoy challenges and always maintain a proactive and results-oriented approach. With experience in agile methodologies such as Scrum and a strong commitment to Clean Code and SOLID principles, I ensure quality and sustainability in software development. In addition, I have experience in solution architecture design, planning, development, deployment and production implementation.',
     items: [{
-        company: "BST Corp. - Santiago",
+        company: "BST Corp., Santiago",
         position: "FUll Stack Developer Jr.",
         duration: "2021-Dec. -> 2024-Mar.",
     }, {
-        company: "company 2",
-        position: "FUll Stack Developer",
-        duration: "2020 - 2022",
+        company: "DUOC UC, Maipú",
+        position: "Teacher",
+        duration: "2023-Mar. -> 2023-Ago.",
     }, {
-        company: "company 3",
-        position: "FUll Stack Developer",
-        duration: "2020 - 2022",
-    }, {
-        company: "company 4",
-        position: "FUll Stack Developer",
-        duration: "2020 - 2022",
-    }, {
-        company: "company 5",
-        position: "FUll Stack Developer",
-        duration: "2020 - 2022",
-    }, {
-        company: "company 6",
-        position: "FUll Stack Developer",
-        duration: "2020 - 2022",
-    }, {
-        company: "company 7",
-        position: "FUll Stack Developer",
-        duration: "2020 - 2022",
+        company: "Quintec Chile S.A.",
+        position: "Technical Support",
+        duration: "2003, May. -> 2018, Mar.",
     },
-
-
     ]
-
 }
 
 const education = {
     icon: '/assets/resume/cap.svg',
     title: 'My Education',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel ipsum euismod, bibendum lectus eget, posuere ligula. Sed vel libero non neque gravida lobortis.',
+    description: 'My academic background includes a degree as a Network Administration Technician and a recent degree in Computer Engineering at DUOC UC. This institution has provided me with tools and knowledge in agile project management, software architecture, systems development and various programming languages such as Java, C#, Python, I am currently training in React and next.js technologies to update my knowledge.',
     items: [{
-        institution: "Educations n1",
-        degree: "FUll Stack Developer",
-        duration: "2023",
+        institution: "DUOC UC, Santiago",
+        degree: "Computer Engineering",
+        duration: "2021",
     }, {
-        institution: "Educations n1",
-        degree: "FUll Stack Developer",
-        duration: "2023",
-    }, {
-        institution: "Educations n1",
-        degree: "FUll Stack Developer",
-        duration: "2023",
-    }, {
-        institution: "Educations n1",
-        degree: "FUll Stack Developer",
-        duration: "2023",
-    }, {
-        institution: "Educations n1",
-        degree: "FUll Stack Developer",
-        duration: "2023",
-    }, {
-        institution: "Educations n1",
-        degree: "FUll Stack Developer",
-        duration: "2023",
+        institution: "DUOC UC, Santiago",
+        degree: "Network Management Technician",
+        duration: "2010",
     }, {
         institution: "Educations n1",
         degree: "FUll Stack Developer",
         duration: "2023",
     },
-
-
     ],
 
 }
 
 const skills = {
     title: 'My Skills',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel ipsum euismod, bibendum lectus eget, posuere ligula. Sed vel libero non neque gravida lobortis.',
+    description: 'I have experience in a wide range of technologies, including HTML5, CSS3, JavaScript and TypeScript, along with frameworks such as Bootstrap and Tailwind CSS. My backend experience covers Python, Django, SQL, PostgreSQL, SQLite and Redis. I am proficient in AWS, Heroku, Terraform and Jenkins for cloud and CI/CD management. My experience extends to using Git, Jira, VSCode, npm, pip, and SonarQube for version control, project management, and code quality. This diverse skill set allows me to develop robust, scalable, and efficient solutions.',
     skillList: [
         {
             icon: <FaHtml5 />,
@@ -136,6 +111,10 @@ const skills = {
             icon: <FaJs />,
             skillName: "javascript",
         }, {
+            icon: <FaPython />,
+            skillName: "python",
+        },
+        {
             icon: <FaReact />,
             skillName: "react",
         }, {
@@ -145,11 +124,37 @@ const skills = {
             icon: <SiTailwindcss />,
             skillName: "tailwind css",
         }, {
-            icon: <FaNodeJs />,
-            skillName: "Node js",
+            icon: <FaBootstrap />,
+            skillName: "bootstrap",
         }, {
             icon: <FaFigma />,
             skillName: "figma",
+        }, {
+            icon: <FaAws />,
+            skillName: "aws",
+        },
+        {
+            icon: <FaDatabase />,
+            skillName: "database",
+        },
+        {
+            icon: <FaGitSquare />,
+            skillName: "git",
+        }, {
+            icon: <SiTypescript />,
+            skillName: "git",
+        }, {
+            icon: <BiLogoPostgresql />,
+            skillName: "postgresql",
+        }, {
+            icon: <SiHeroku />,
+            skillName: "heroku",
+        }, {
+            icon: <SiJira />,
+            skillName: "jira",
+        }, {
+            icon: <SiSonarqube />,
+            skillName: "sonarqube",
         }
     ]
 }
@@ -272,11 +277,11 @@ const Resume = () => {
                                 <h3 className="text-4xl font-bold">{about.title}</h3>
                                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{about.description}</p>
                                 <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
-                                    {about.info.map((item,idex)=> {
+                                    {about.info.map((item, idex) => {
                                         return <li key={idex} className="flex items-center justify-center xl:justify-start gap-4">
                                             <span className="text-white/60" >{item.fieldName}</span>
                                             <span className="text-xl" >{item.fieldValue}</span>
-                                            </li>
+                                        </li>
                                     })}
                                 </ul>
                             </div>
