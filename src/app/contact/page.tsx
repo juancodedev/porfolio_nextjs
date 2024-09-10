@@ -11,8 +11,7 @@ import { motion } from "framer-motion";
 import { zodResolver } from "@hookform/resolvers/zod"
 // import { FormSchemaType } from "@/lib/schema";
 import { FormSchema, type FormSchemaType } from "@/lib/schema"
-
-const urlAPI = 'http://localhost:3001/sql/agregar'
+require('dotenv').config()
 
 const info = [
     {
@@ -58,6 +57,7 @@ const Contact: React.FC = () => {
     const [data, setData] = React.useState({})
 
     const sendDataAPI = async (dataForm: FormSchemaType) => {
+
         setError(null);
         setSuccess(null);
         setIsSubmitting(true);
@@ -70,7 +70,7 @@ const Contact: React.FC = () => {
                 dataForm
             ),
         }
-
+        const urlAPI = process.env.NEXT_PUBLIC_URL || 'http://localhost:3001/sql/agregar';
         try {
             const response = await fetch(urlAPI, options)
             console.log('ok', response.ok)
