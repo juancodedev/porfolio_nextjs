@@ -88,11 +88,13 @@ const education = {
         institution: "DUOC UC, Santiago",
         degree: "Network Management Technician",
         duration: "2010",
-    }, {
-        institution: "Educations n1",
-        degree: "FUll Stack Developer",
-        duration: "2023",
     },
+    
+    // {
+    //     institution: "Educations n1",
+    //     degree: "FUll Stack Developer",
+    //     duration: "2023",
+    // },
     ],
 
 }
