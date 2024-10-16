@@ -8,7 +8,7 @@ interface SocialItem {
 }
 
 const socials: SocialItem[] = [
-    { icon: <FaGithub />, path: 'https://github.com/juanshocl/' },
+    { icon: <FaGithub />, path: 'https://github.com/juancodedev' },
     { icon: <FaLinkedinIn />, path: 'https://www.linkedin.com/in/juanshocl/' },
     { icon: <FaYoutube />, path: 'https://www.youtube.com/juanshocl' },
     // { icon: <FaTwitter />, path: '' },

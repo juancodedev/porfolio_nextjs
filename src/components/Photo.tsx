@@ -24,14 +24,14 @@ const Photo = () => {
                             ease: "easeInOut"
                         },
                     }}
-                    className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute">
+                    className="w-[310px] h-[310px] xl:w-[510px] xl:h-[510px] mix-blend-lighten absolute">
                     <Image
-                        src="/assets/new_profile.png"
+                        src="/assets/new_profile.svg"
                         priority
                         quality={100}
                         fill
                         alt="Juan Muñoz"
-                        className="object-contain"
+                        className="pt-[23px] pb-[8px] pr-[15px] pl-[15px] rounded-full"
 
                     />
                 </motion.div>
