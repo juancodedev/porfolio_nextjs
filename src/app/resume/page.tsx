@@ -21,7 +21,8 @@ import {
     SiTypescript,
     SiHeroku,
     SiJira,
-    SiSonarqube
+    SiSonarqube,
+    SiVercel
 } from "react-icons/si"
 
 const about = {
@@ -59,8 +60,12 @@ const about = {
 const experience = {
     icon: '/assets/resume/badge.svg',
     title: 'My experience',
-    description: 'I am a systems developer with over 19 years of IT experience. I specialize in Python, JavaScript, Java and have experience in AWS Services, PostgreSQL and Linux. I am resourceful, dynamic and have a natural ability to learn quickly and adapt to new technologies. I enjoy challenges and always maintain a proactive and results-oriented approach. With experience in agile methodologies such as Scrum and a strong commitment to Clean Code and SOLID principles, I ensure quality and sustainability in software development. In addition, I have experience in solution architecture design, planning, development, deployment and production implementation.',
+    description: 'I am a systems developer with over 19 years of IT experience. I specialize in Python, JavaScript, and Java, with expertise in AWS Services, PostgreSQL, and Linux. I am resourceful, dynamic, and have a natural ability to learn quickly and adapt to new technologies. I enjoy challenges and always maintain a proactive, results-oriented approach. With experience in agile methodologies such as Scrum and a strong commitment to Clean Code and SOLID principles, I ensure quality and sustainability in software development. Additionally, I have experience in solution architecture design, planning, development, deployment, and production implementation.',
     items: [{
+        company: "HCMFront, Santiago",
+        position: "FUll Stack Developer Jr.",
+        duration: "2024-Oct. -> Today.",
+    }, {
         company: "BST Corp., Santiago",
         position: "FUll Stack Developer Jr.",
         duration: "2021-Dec. -> 2024-Mar.",
@@ -84,17 +89,27 @@ const education = {
         institution: "DUOC UC, Santiago",
         degree: "Computer Engineering",
         duration: "2021",
-    }, {
+    },{
         institution: "DUOC UC, Santiago",
         degree: "Network Management Technician",
         duration: "2010",
-    },
-    
-    // {
-    //     institution: "Educations n1",
-    //     degree: "FUll Stack Developer",
-    //     duration: "2023",
-    // },
+    },{
+        institution: "AIEP/Sense y Fundacion Telefonica",
+        degree: "Diploma in Web Design and User Experience (UX/UI)",
+        duration: "90h, 2025",
+    },{
+        institution: "AIEP/Sense y Fundacion Telefonica",
+        degree: "Diploma in Web Design and Programming",
+        duration: "100h, 2025",
+    },{
+        institution: "IPCHILE/Sense y Fundacion Telefonica",
+        degree: "Diploma in Entrepreneurship and Digital Management",
+        duration: "90h, 2025",
+    },{
+        institution: "Universidad Playa Ancha/Sense y Fundacion Telefonica",
+        degree: "Diploma in Agile Project Design and Management",
+        duration: "100h, 2025",
+    }
     ],
 
 }
@@ -157,7 +172,10 @@ const skills = {
         }, {
             icon: <SiSonarqube />,
             skillName: "sonarqube",
-        }
+        }, {
+            icon: <SiVercel />,
+            skillName: "Vercel",
+        },
     ]
 }
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -231,11 +249,11 @@ const Resume = () => {
                                         {education.items.map((item, index) => {
                                             return (
                                                 <li key={index}
-                                                    className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                                                    className="bg-[#232329] h-[200px] py-5 px-8 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
                                                 >
                                                     <span className="text-accent">{item.duration}</span>
-                                                    <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">{item.degree}</h3>
-                                                    <div className="flex items-center gap-3">
+                                                    <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left pb-2">{item.degree}</h3>
+                                                    <div className="flex items-center gap-3 pt-5">
                                                         <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
                                                         <p className="text-white/60">{item.institution}</p>
                                                     </div>
