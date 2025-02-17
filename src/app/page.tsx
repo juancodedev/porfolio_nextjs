@@ -22,7 +22,7 @@ const Home = () => {
             {/* buttons and socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <a
-                href="/CV_Juan_Muñoz_Castillo.pdf"
+                href="/CV_Juan_Muñoz_Castillo_02_2025.pdf"
                 download
                 target="_blank"
                 rel="noopener noreferrer"
