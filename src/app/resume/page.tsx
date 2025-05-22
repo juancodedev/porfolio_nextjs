@@ -11,6 +11,9 @@ import {
     FaAws,
     FaDatabase,
     FaGitSquare,
+    FaGithub,
+    FaLinux,
+    FaJenkins,
 } from "react-icons/fa"
 
 import { BiLogoPostgresql } from "react-icons/bi";
@@ -22,8 +25,12 @@ import {
     SiHeroku,
     SiJira,
     SiSonarqube,
-    SiVercel
+    SiVercel,
+    SiMysql,
+    SiAmazonec2,
+    SiGithubactions
 } from "react-icons/si"
+import { DiScrum } from "react-icons/di";
 
 const about = {
     title: "About Me",
@@ -120,61 +127,88 @@ const skills = {
     skillList: [
         {
             icon: <FaHtml5 />,
-            skillName: "html 5",
+            skillName: "HTML 5",
         }, {
             icon: <FaCss3 />,
-            skillName: "css 3",
+            skillName: "CSS 3",
         }, {
             icon: <FaJs />,
-            skillName: "javascript",
+            skillName: "Javascript",
         }, {
             icon: <FaPython />,
-            skillName: "python",
+            skillName: "Python",
         },
         {
             icon: <FaReact />,
-            skillName: "react",
+            skillName: "React",
         }, {
             icon: <SiNextdotjs />,
-            skillName: "next.js",
+            skillName: "Next.js",
         }, {
             icon: <SiTailwindcss />,
-            skillName: "tailwind css",
+            skillName: "Tailwind CSS",
         }, {
             icon: <FaBootstrap />,
-            skillName: "bootstrap",
+            skillName: "Bootstrap",
         }, {
             icon: <FaFigma />,
-            skillName: "figma",
+            skillName: "Figma",
         }, {
             icon: <FaAws />,
-            skillName: "aws",
+            skillName: "AWS",
+        }, {
+            icon: <SiAmazonec2 />,
+            skillName: "EC2",
         },
         {
             icon: <FaDatabase />,
-            skillName: "database",
+            skillName: "Database",
         },
         {
             icon: <FaGitSquare />,
-            skillName: "git",
+            skillName: "Git",
+        },
+        {
+            icon: <FaGithub />,
+            skillName: "GitHub",
+        },
+        {
+            icon: <SiGithubactions />,
+            skillName: "GitHub Actions",
         }, {
             icon: <SiTypescript />,
-            skillName: "git",
+            skillName: "Typescript",
         }, {
             icon: <BiLogoPostgresql />,
-            skillName: "postgresql",
+            skillName: "Postgresql",
+        }, {
+            icon: <SiMysql />,
+            skillName: "Mysql",
         }, {
             icon: <SiHeroku />,
-            skillName: "heroku",
+            skillName: "Heroku",
         }, {
             icon: <SiJira />,
-            skillName: "jira",
+            skillName: "Jira",
         }, {
             icon: <SiSonarqube />,
-            skillName: "sonarqube",
-        }, {
+            skillName: "Sonarqube",
+        }, 
+        {
             icon: <SiVercel />,
             skillName: "Vercel",
+        },
+        {
+            icon: <FaLinux />,
+            skillName: "Linux",
+        },
+        {
+            icon: <FaJenkins />,
+            skillName: "Jenkins",
+        },
+        {
+            icon: <DiScrum />,
+            skillName: "Scrum",
         },
     ]
 }
