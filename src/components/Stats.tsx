@@ -12,7 +12,7 @@ const stats = [
         num: 24,
         text: "Technologies, Real experience",
     }, {
-        num: 1169,
+        num: 1174,
         text: "Code commits",
     },
 ]
