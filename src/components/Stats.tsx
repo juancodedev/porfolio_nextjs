@@ -6,13 +6,13 @@ const stats = [
         num: 3,
         text: "Years of Experience",
     }, {
-        num: 72,
+        num: 74,
         text: "Collaborated Repositories",
     }, {
         num: 24,
         text: "Technologies, Real experience",
     }, {
-        num: 1528,
+        num: 1567,
         text: "Code commits",
     },
 ]
