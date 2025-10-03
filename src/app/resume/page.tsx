@@ -55,7 +55,7 @@ const about = {
             fieldName: "Email",
             fieldValue: "cl.jmunoz@gmail.com",
         }, {
-            fieldName: "Frelance",
+            fieldName: "Freelance",
             fieldValue: "Available",
         }, {
             fieldName: "Languages",
@@ -70,11 +70,11 @@ const experience = {
     description: 'I am a systems developer with over 19 years of IT experience. I specialize in Python, JavaScript, and Java, with expertise in AWS Services, PostgreSQL, and Linux. I am resourceful, dynamic, and have a natural ability to learn quickly and adapt to new technologies. I enjoy challenges and always maintain a proactive, results-oriented approach. With experience in agile methodologies such as Scrum and a strong commitment to Clean Code and SOLID principles, I ensure quality and sustainability in software development. Additionally, I have experience in solution architecture design, planning, development, deployment, and production implementation.',
     items: [{
         company: "HCMFront, Santiago",
-        position: "FUll Stack Developer Jr.",
+        position: "Full Stack Developer Jr.",
         duration: "2024-Oct. -> Today.",
     }, {
         company: "BST Corp., Santiago",
-        position: "FUll Stack Developer Jr.",
+        position: "Full Stack Developer Jr.",
         duration: "2021-Dec. -> 2024-Mar.",
     }, {
         company: "DUOC UC, Maipú",
@@ -233,7 +233,7 @@ const Resume = () => {
             animate={{
                 opacity: 1,
                 transition: {
-                    delay: 2.4,
+                    delay: 0.5,
                     duration: 0.4,
                     ease: "easeIn"
                 },
