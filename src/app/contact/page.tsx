@@ -9,9 +9,7 @@ import { useForm, Controller } from 'react-hook-form'
 import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { zodResolver } from "@hookform/resolvers/zod"
-// import { FormSchemaType } from "@/lib/schema";
 import { FormSchema, type FormSchemaType } from "@/lib/schema"
-require('dotenv').config()
 
 const info = [
     {
@@ -73,17 +71,13 @@ const Contact: React.FC = () => {
         const urlAPI = process.env.NEXT_PUBLIC_URL || 'http://localhost:3001/sql/agregar';
         try {
             const response = await fetch(urlAPI, options)
-            console.log('ok', response.ok)
             const resultJson = await response.json();
 
             if (!response.ok) {
-                console.log('Respuesta API:', resultJson);
-
                 throw new Error(resultJson.message);
             }
             if (response.ok) {
                 setData(resultJson.data)
-                console.log(resultJson.data)
                 reset();
                 setSuccess(resultJson.message || 'Datos enviados correctamente');
             }
@@ -101,7 +95,7 @@ const Contact: React.FC = () => {
             animate={{
                 opacity: 1,
                 transition: {
-                    delay: 2.4,
+                    delay: 0.4,
                     duration: 0.4,
                     ease: "easeIn"
                 },
