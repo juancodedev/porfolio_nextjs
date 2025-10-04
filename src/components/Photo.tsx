@@ -6,20 +6,20 @@ import Image from "next/image"
 const Photo = () => {
     return (
         <div className="w-full h-full relative">
-            <motion.div initial={{ opacity: 0 }} animate={{
+            <motion.div initial={{ opacity: 1 }} animate={{
                 opacity: 1,
                 transition: {
-                    delay: 2,
+                    delay: 0,
                     duration: 0.4,
                     ease: "easeIn"
                 },
             }}>
                 {/* Image */}
                 <motion.div
-                    initial={{ opacity: 0 }} animate={{
+                    initial={{ opacity: 1 }} animate={{
                         opacity: 1,
                         transition: {
-                            delay: 2.4,
+                            delay: 0,
                             duration: 0.4,
                             ease: "easeInOut"
                         },
@@ -32,7 +32,7 @@ const Photo = () => {
                         fill
                         alt="Juan Muñoz"
                         className="pt-[23px] pb-[8px] pr-[15px] pl-[15px] rounded-full"
-
+                        fetchPriority="high"
                     />
                 </motion.div>
                 {/* circle */}
