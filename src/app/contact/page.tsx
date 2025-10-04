@@ -95,9 +95,9 @@ const Contact: React.FC = () => {
             animate={{
                 opacity: 1,
                 transition: {
-                    delay: 0.4,
-                    duration: 0.4,
-                    ease: "easeIn"
+                    delay: 0,
+                    duration: 0.2,
+                    ease: "easeOut"
                 },
             }}
             className="py-6"
