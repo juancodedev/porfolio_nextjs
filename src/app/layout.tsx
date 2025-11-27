@@ -25,9 +25,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://your-domain.com",
+    url: "https://www.juancodedev.dev",
     title: "Juan Muñoz - Full Stack Developer Portfolio",
-    description: "Full Stack Developer specializing in Python, JavaScript, React, Next.js, and AWS. Over 2 years of experience building modern web applications.",
+    description: "Full Stack Developer specializing in Python, JavaScript, React, Next.js, and AWS. Over 3 years of experience building modern web applications.",
     siteName: "Juan Muñoz Portfolio",
     images: [{
       url: "/profile.png",
