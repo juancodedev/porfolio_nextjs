@@ -13,15 +13,11 @@ interface WorkSliderBtnsProps {
 
 const WorkSliderBtns: React.FC<WorkSliderBtnsProps> = ({ containerStyles, btnStyles, iconsStyles }) => {
     const swiper = useSwiper();
-    const handlePrev = async () => {
-        if (swiper && swiper.slidePrev) {
-            await swiper.slidePrev();
-        }
+    const handlePrev = () => {
+        swiper?.slidePrev();
     }
-    const handleNext = async () => {
-        if (swiper && swiper.slideNext) {
-            await swiper.slideNext();
-        }
+    const handleNext = () => {
+        swiper?.slideNext();
     }
     return (
         <div className={containerStyles as string}>

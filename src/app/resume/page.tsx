@@ -34,7 +34,7 @@ import { DiScrum } from "react-icons/di";
 
 const about = {
     title: "About Me",
-    description: "Professional with more than 19 years of experience in the IT area, currently systems developer, highly motivated and eager to grow. developer, highly motivated and eager to grow. I am a resolute, dynamic professional with a great interest in the development of great interest in the development of innovative solutions through the use of technologies. great capacity for the diagnosis and resolution of incidents, able to assume responsibilities and make assertive decisions. assertive decisions, I also have a great capacity to learn and apply my knowledge to the professional field. to learn and apply my knowledge to the professional environment.",
+    description: "Professional with more than 19 years of experience in the IT area, currently working as a systems developer. I am a resolute, dynamic professional with a great interest in developing innovative solutions through the use of technology. I have a strong capacity for diagnosing and resolving complex incidents, and I'm able to assume responsibilities and make assertive decisions. I have a great capacity to learn and apply my knowledge in professional environments.",
     info: [
         {
             fieldName: "Name",
@@ -44,7 +44,7 @@ const about = {
             fieldValue: "(56 9) 983 077 78",
         }, {
             fieldName: "Experience",
-            fieldValue: "+2 Years",
+            fieldValue: "+3 Years",
             // }, {
             //     fieldName: "Skype",
             //     fieldValue: "skype.demo",
@@ -96,23 +96,23 @@ const education = {
         institution: "DUOC UC, Santiago",
         degree: "Computer Engineering",
         duration: "2021",
-    },{
+    }, {
         institution: "DUOC UC, Santiago",
         degree: "Network Management Technician",
         duration: "2010",
-    },{
+    }, {
         institution: "AIEP/Sense y Fundacion Telefonica",
         degree: "Diploma in Web Design and User Experience (UX/UI)",
         duration: "90h, 2025",
-    },{
+    }, {
         institution: "AIEP/Sense y Fundacion Telefonica",
         degree: "Diploma in Web Design and Programming",
         duration: "100h, 2025",
-    },{
+    }, {
         institution: "IPCHILE/Sense y Fundacion Telefonica",
         degree: "Diploma in Entrepreneurship and Digital Management",
         duration: "90h, 2025",
-    },{
+    }, {
         institution: "Universidad Playa Ancha/Sense y Fundacion Telefonica",
         degree: "Diploma in Agile Project Design and Management",
         duration: "100h, 2025",
@@ -193,7 +193,7 @@ const skills = {
         }, {
             icon: <SiSonarqube />,
             skillName: "Sonarqube",
-        }, 
+        },
         {
             icon: <SiVercel />,
             skillName: "Vercel",
@@ -212,7 +212,13 @@ const skills = {
         },
     ]
 }
+import type { Metadata } from "next";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
+export const metadata: Metadata = {
+    title: "Resume",
+    description: "Juan Muñoz's resume — experience, education, and skills as a Full Stack Developer.",
+};
 
 
 import {

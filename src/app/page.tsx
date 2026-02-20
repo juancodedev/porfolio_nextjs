@@ -22,8 +22,7 @@ const Home = () => {
               Hello I&apos;m <br /> <span className="text-accent">Juan Muñoz</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
-              I excel at crafting elegant digital experiences and I am proficient
-              in various programming languages and technologies.
+              Full Stack Developer with 3+ years in Python & React. I build scalable systems, integrate cloud services with AWS, and have shipped production apps used by real companies.
             </p>
             {/* buttons and socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
@@ -40,12 +39,12 @@ const Home = () => {
                   <span> Download CV</span>
                   <FiDownload className="text-xl" />
                 </Button>
-                </a>
-                <div className="mb-8 xl:mb-0">
-                  <Social containerStyles="flex gap-6" iconStyles="w-9 h-9 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500">
+              </a>
+              <div className="mb-8 xl:mb-0">
+                <Social containerStyles="flex gap-6" iconStyles="w-9 h-9 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500">
 
-                  </Social>
-                </div>
+                </Social>
+              </div>
             </div>
           </div>
           {/* Photo */}
