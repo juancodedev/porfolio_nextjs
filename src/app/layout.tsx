@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     default: "Juan Muñoz - Full Stack Developer Portfolio",
     template: "%s | Juan Muñoz"
   },
-  description: "Full Stack Developer specializing in Python, JavaScript, React, Next.js, and AWS. Over 2 years of experience building modern web applications and cloud solutions.",
+  description: "Full Stack Developer specializing in Python, JavaScript, React, Next.js, and AWS. Over 3 years of experience building modern web applications and cloud solutions.",
   keywords: ["Full Stack Developer", "Python", "JavaScript", "React", "Next.js", "AWS", "PostgreSQL", "Web Development", "Software Engineer", "Juan Muñoz"],
   authors: [{ name: "Juan Muñoz", url: "https://github.com/juancodedev" }],
   creator: "Juan Muñoz",
@@ -53,9 +53,7 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  verification: {
-    google: "your-google-verification-code",
-  }
+  // Add google: "your-code" here once you have a Google Search Console verification code
 };
 
 export default function RootLayout({
@@ -65,9 +63,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <SpeedInsights/>
-      <Analytics />
       <body className={jetbrainsMono.variable}>
+        <SpeedInsights />
+        <Analytics />
         <Header />
         <StairTransition />
         <PageTransition>
