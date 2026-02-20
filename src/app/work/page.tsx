@@ -18,7 +18,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 import WorkSliderBtns from '@/components/WorkSliderBtns';
 import type { Swiper as SwiperType } from 'swiper';
-import type { Metadata } from 'next';
 
 const allProjects = [
   {
@@ -147,8 +146,8 @@ const Work = () => {
               key={cat}
               onClick={() => handleCategoryChange(cat)}
               className={`px-5 py-2 rounded-full border text-sm font-medium capitalize transition-all duration-300 ${activeCategory === cat
-                  ? 'bg-accent text-primary border-accent'
-                  : 'border-white/20 text-white/60 hover:border-accent hover:text-accent'
+                ? 'bg-accent text-primary border-accent'
+                : 'border-white/20 text-white/60 hover:border-accent hover:text-accent'
                 }`}
             >
               {cat}
