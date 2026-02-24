@@ -39,7 +39,7 @@ const Photo = () => {
                 <motion.svg className="w-[300px] xl:w-[506px] h-[300px] xl:h-[560px]"
                     fill="transparent"
                     viewBox="0 0 506 506"
-                    xmlns="http://www.w3.org/200/svg">
+                    xmlns="http://www.w3.org/2000/svg">
                     <motion.circle
                         cx="253"
                         cy="253"
@@ -53,8 +53,8 @@ const Photo = () => {
                             strokeDasharray: ["15 120 25 25", "16 25 92 72", "4 250 22 22"],
                             rotate: [120, 360],
                         }}
-                        transition = {{
-                            duration:10,
+                        transition={{
+                            duration: 10,
                             repeat: Infinity,
                             repeatType: "reverse",
                         }}>
