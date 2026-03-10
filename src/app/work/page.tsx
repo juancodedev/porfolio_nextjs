@@ -38,7 +38,7 @@ const allProjects = [
       { name: 'Zod' },
     ],
     image: '/assets/work/QuilverCRM.png',
-    live: 'https://archer-hub-cloud.lovable.app',
+    live: 'https://quiverapp.juancode.dev/',
     github: '',
   }, {
     num: '02',
