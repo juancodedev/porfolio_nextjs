@@ -78,7 +78,7 @@ const allProjects = [
       { name: 'Vercel' },
     ],
     image: '/assets/work/TappMesa.png',
-    live: 'https://tappmesa.vercel.app',
+    live: 'https://tappmesa.juancode.dev',
     github: '',
   }, {
     num: '04',
