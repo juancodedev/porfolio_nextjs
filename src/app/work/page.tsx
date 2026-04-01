@@ -57,8 +57,8 @@ const allProjects = [
       { name: 'React Router' },
       { name: 'Zod' },
     ],
-    image: '/assets/work/BussinesMap.png',
-    live: 'https://map-your-spot-60.lovable.app',
+    image: '/assets/work/NearNow.png',
+    live: 'https://nearnow.juancode.dev/',
     github: '',
   }, {
     num: '03',
