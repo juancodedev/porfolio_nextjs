@@ -1,9 +1,9 @@
+import React from 'react';
 import Link from 'next/link';
 import { FaGithub, FaLinkedinIn, FaYoutube, FaTwitter } from 'react-icons/fa'
-import { Interface } from 'readline';
 
 interface SocialItem {
-    icon: JSX.Element,
+    icon: React.ReactNode,
     path: string,
 }
 
