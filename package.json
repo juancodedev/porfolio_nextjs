@@ -40,8 +40,8 @@
     "@types/react-dom": "^19.2.3",
     "eslint": "^10.2.1",
     "eslint-config-next": "16.2.4",
-    "postcss": "^8.5.12",
-    "tailwindcss": "^4.2.4",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.1",
     "typescript": "^6.0.3"
   },
   "pnpm": {
@@ -50,7 +50,7 @@
     "glob": "^10.4.5",
     "picomatch": "^4.0.2",
     "brace-expansion": "^2.0.1",
-    "postcss": "^8.5.12",
+    "postcss": "^8.4.38",
     "js-yaml": "^4.1.0",
     "flatted": "^3.3.1"
   }

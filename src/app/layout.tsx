@@ -14,6 +14,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.juancodedev.dev"),
   title: {
     default: "Juan Muñoz - Full Stack Developer Portfolio",
     template: "%s | Juan Muñoz"
