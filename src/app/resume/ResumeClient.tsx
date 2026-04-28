@@ -14,6 +14,7 @@ import {
     FaGithub,
     FaLinux,
     FaJenkins,
+    FaServer,
 } from "react-icons/fa"
 
 import { BiLogoPostgresql } from "react-icons/bi";
@@ -23,10 +24,9 @@ import {
     SiTypescript,
     SiHeroku,
     SiJira,
-    SiSonarqube,
+    SiSonarqubeserver,
     SiVercel,
     SiMysql,
-    SiAmazonec2,
     SiGithubactions
 } from "react-icons/si"
 import { DiScrum } from "react-icons/di";
@@ -140,7 +140,7 @@ const skills = {
         { icon: <FaBootstrap />, skillName: "Bootstrap" },
         { icon: <FaFigma />, skillName: "Figma" },
         { icon: <FaAws />, skillName: "AWS" },
-        { icon: <SiAmazonec2 />, skillName: "EC2" },
+        { icon: <FaServer />, skillName: "EC2" },
         { icon: <FaDatabase />, skillName: "Database" },
         { icon: <FaGitSquare />, skillName: "Git" },
         { icon: <FaGithub />, skillName: "GitHub" },
@@ -150,7 +150,7 @@ const skills = {
         { icon: <SiMysql />, skillName: "Mysql" },
         { icon: <SiHeroku />, skillName: "Heroku" },
         { icon: <SiJira />, skillName: "Jira" },
-        { icon: <SiSonarqube />, skillName: "Sonarqube" },
+        { icon: <SiSonarqubeserver />, skillName: "Sonarqube" },
         { icon: <SiVercel />, skillName: "Vercel" },
         { icon: <FaLinux />, skillName: "Linux" },
         { icon: <FaJenkins />, skillName: "Jenkins" },
