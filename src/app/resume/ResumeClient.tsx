@@ -18,17 +18,15 @@ import {
 } from "react-icons/fa"
 
 import { BiLogoPostgresql } from "react-icons/bi";
-
-import {
-    SiTailwindcss, SiNextdotjs,
-    SiTypescript,
-    SiHeroku,
-    SiJira,
-    SiSonarqubeserver,
-    SiVercel,
-    SiMysql,
-    SiGithubactions
-} from "react-icons/si"
+import { SiTailwindcss } from "react-icons/si";
+import { SiNextdotjs } from "react-icons/si";
+import { SiTypescript } from "react-icons/si";
+import { SiHeroku } from "react-icons/si";
+import { SiJira } from "react-icons/si";
+import { SiSonarqubeserver } from "react-icons/si";
+import { SiVercel } from "react-icons/si";
+import { SiMysql } from "react-icons/si";
+import { SiGithubactions } from "react-icons/si";
 import { DiScrum } from "react-icons/di";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";

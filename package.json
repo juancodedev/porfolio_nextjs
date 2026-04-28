@@ -50,7 +50,7 @@
     "glob": "^10.4.5",
     "picomatch": "^4.0.2",
     "brace-expansion": "^2.0.1",
-    "postcss": "^8.4.38",
+    "postcss": "^8.5.12",
     "js-yaml": "^4.1.0",
     "flatted": "^3.3.1"
   }
