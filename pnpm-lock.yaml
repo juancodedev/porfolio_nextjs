@@ -9,7 +9,7 @@ overrides:
   glob: ^10.4.5
   picomatch: ^4.0.2
   brace-expansion: ^2.0.1
-  postcss: ^8.4.38
+  postcss: ^8.5.12
   js-yaml: ^4.1.0
   flatted: ^3.3.1
 
@@ -106,7 +106,7 @@ importers:
         specifier: 16.2.4
         version: 16.2.4(@typescript-eslint/parser@8.59.1(eslint@10.2.1(jiti@1.21.7))(typescript@6.0.3))(eslint@10.2.1(jiti@1.21.7))(typescript@6.0.3)
       postcss:
-        specifier: ^8.4.38
+        specifier: ^8.5.12
         version: 8.5.12
       tailwindcss:
         specifier: ^4.2.4
