@@ -1,131 +1,95 @@
 # Juan Muñoz - Portfolio
 
-Portfolio personal de Juan Muñoz, Full Stack Developer especializado en Python, JavaScript, React, Next.js y AWS.
+Portfolio personal de **Juan Muñoz**, Full Stack Developer especializado en Python, JavaScript, React, Next.js y AWS.  
+Construido con **Next.js 16** (App Router), **TypeScript** y **Tailwind CSS**.
 
-## 🚀 Tecnologías
+## 🚀 Stack Tecnológico
 
-- **Framework:** Next.js 14.2 (App Router)
-- **Styling:** Tailwind CSS
-- **UI Components:** Radix UI, shadcn/ui
-- **Animations:** Framer Motion
-- **Forms:** React Hook Form + Zod
-- **Icons:** React Icons, Lucide React
-- **Font:** JetBrains Mono
-- **Analytics:** Vercel Analytics & Speed Insights
+| Categoría        | Tecnologías                                                    |
+| ---------------- | -------------------------------------------------------------- |
+| **Framework**    | Next.js 16.2.4 (App Router)                                    |
+| **Lenguaje**     | TypeScript 6                                                   |
+| **Estilos**      | Tailwind CSS 3 + tailwindcss-animate                           |
+| **UI**           | Radix UI (Dialog, Select, Tabs, Tooltip, ScrollArea) + shadcn/ui |
+| **Animaciones**  | Framer Motion 12 + Swiper 12 (carruseles)                     |
+| **Forms**        | React Hook Form 7 + Zod 4                                     |
+| **Iconos**       | React Icons, Lucide React                                     |
+| **Tipografía**   | JetBrains Mono (via next/font)                                 |
+| **Analíticas**   | @vercel/analytics + @vercel/speed-insights                     |
 
 ## 📦 Instalación
 
 ```bash
-# Clonar el repositorio
-git clone https://github.com/juancodedev/portafolio.git
-
-# Instalar dependencias
-npm install
-
-# Ejecutar en modo desarrollo
-npm run dev
+pnpm install
+pnpm dev        # http://localhost:3000
 ```
 
-Abrir [http://localhost:3000](http://localhost:3000) en el navegador.
+> El proyecto usa **pnpm** como package manager.
 
-## 🛠️ Mejoras Recientes
-
-### Errores Críticos Corregidos
-- ✅ CSS typos corregidos en `page.tsx` (`max-w-[500px]`, `border border-accent`)
-- ✅ Typo en `Stats.tsx` (eliminado `+` suelto)
-- ✅ Eliminado `require('dotenv').config()` de contact page (no funciona en cliente)
-- ✅ Removidos `console.log()` de production
-- ✅ Typos textuales: Portfolio, Freelance, Full Stack, experiences, technologies
-
-### SEO & Metadata Mejorado
-- ✅ Metadata completa con Open Graph y Twitter Cards
-- ✅ Keywords optimizados para SEO
-- ✅ Metadata específica por página (Home, Work, Resume, Services, Contact)
-- ✅ Robots meta tags configurados
-- ✅ Favicon dinámico generado (`icon.tsx` y `apple-icon.tsx`)
-
-### Performance & UX
-- ✅ Animaciones optimizadas (delay reducido de 2.4s a 0.4-0.6s)
-- ✅ Transiciones más fluidas y rápidas
-
-## 📝 Tareas Pendientes
-
-### 1. Configurar URL del Dominio
-Reemplazar en `src/app/layout.tsx:28`:
-```typescript
-url: "https://your-domain.com", // ← Actualizar con tu dominio real
-```
-
-### 2. Google Search Console
-Configurar verificación en `src/app/layout.tsx:57`:
-```typescript
-verification: {
-  google: "your-google-verification-code", // ← Actualizar con código real
-}
-```
-
-### 3. Variables de Entorno
-Crear archivo `.env.local`:
-```bash
-NEXT_PUBLIC_URL=https://tu-api-backend.com/endpoint
-```
-
-### 4. Proyectos Reales
-Actualizar `src/app/work/page.tsx` con proyectos reales:
-- Reemplazar datos de ejemplo (Lorem ipsum)
-- Agregar enlaces a GitHub y demos en vivo
-- Actualizar imágenes de proyectos
-
-## 📁 Estructura del Proyecto
+## 🗺️ Estructura
 
 ```
 src/
 ├── app/
-│   ├── contact/
-│   │   ├── layout.tsx      # Metadata de contacto
-│   │   └── page.tsx        # Formulario de contacto
-│   ├── resume/
-│   │   ├── layout.tsx      # Metadata de resume
-│   │   └── page.tsx        # CV y skills
-│   ├── services/
-│   │   ├── layout.tsx      # Metadata de servicios
-│   │   └── page.tsx        # Servicios ofrecidos
-│   ├── work/
-│   │   ├── layout.tsx      # Metadata de proyectos
-│   │   └── page.tsx        # Portfolio de proyectos
-│   ├── icon.tsx            # Favicon dinámico
-│   ├── apple-icon.tsx      # Apple touch icon
-│   ├── layout.tsx          # Layout principal + SEO
-│   ├── page.tsx            # Home page
-│   └── globals.css         # Estilos globales
+│   ├── contact/        # Formulario de contacto (React Hook Form + Zod)
+│   ├── resume/         # CV interactivo con tabs
+│   ├── services/       # Servicios ofrecidos
+│   ├── work/           # Portfolio de proyectos con Swiper
+│   ├── layout.tsx      # Layout raíz + SEO / Open Graph / Twitter Cards
+│   ├── page.tsx        # Home con hero, stats y foto animada
+│   ├── not-found.tsx   # Página 404 personalizada
+│   ├── icon.tsx        # Favicon dinámico "JM"
+│   ├── apple-icon.tsx  # Apple touch icon
+│   ├── sitemap.ts      # Sitemap estático
+│   └── robots.ts       # Configuración robots
 ├── components/
-│   ├── ui/                 # Componentes de shadcn/ui
-│   ├── Header.tsx
-│   ├── Nav.tsx
-│   ├── MobileNav.tsx
-│   ├── Photo.tsx
-│   ├── Social.tsx
-│   ├── Stats.tsx
-│   └── ...
-└── lib/
-    ├── schema.ts           # Validaciones Zod
-    ├── utils.ts            # Utilidades
-    └── _actions.ts         # Server actions
+│   ├── ui/             # shadcn/ui components
+│   ├── Header.tsx      # Header con navegación desktop/mobile
+│   ├── Nav.tsx         # Nav desktop
+│   ├── MobileNav.tsx   # Drawer mobile con Radix Sheet
+│   ├── Photo.tsx       # Foto animada con Framer Motion
+│   ├── Social.tsx      # Links redes sociales
+│   ├── Stats.tsx       # Contadores animados (CountUp)
+│   ├── Stairs.tsx      # Animación de escalera para transiciones
+│   ├── StairTransition.tsx
+│   ├── PageTransition.tsx
+│   └── WorkSliderBtns.tsx
+├── lib/
+│   ├── schema.ts       # Esquema Zod para el formulario
+│   ├── utils.ts        # cn() utility
+│   └── _actions.ts     # Server action
+└── types/
+    └── swiper.d.ts     # Tipos para módulos CSS de Swiper
 ```
 
-## 🚀 Deploy en Vercel
+## 📄 Páginas
 
-1. Hacer push a GitHub
-2. Importar proyecto en [Vercel](https://vercel.com)
-3. Configurar variables de entorno
-4. Deploy automático
+- **`/`** — Home con hero, stats, foto y CV descargable
+- **`/services`** — Servicios: Web Dev, Backend, Integración, Consultoría
+- **`/resume`** — CV interactivo (Experiencia, Educación, Skills, About Me)
+- **`/work`** — Proyectos destacados con filtros y carrusel
+- **`/contact`** — Formulario de contacto (con pre-selección de servicio vía query param)
 
-## 📧 Contacto
+## 🛠️ Proyectos Destacados
+
+| Proyecto               | Tech Stack                                    | Live                                      |
+| ---------------------- | --------------------------------------------- | ----------------------------------------- |
+| Quilver CRM            | React, Supabase, Shadcn/ui, Recharts          | [quiverapp.juancode.dev](https://quiverapp.juancode.dev) |
+| Map Services (NearNow) | React, Leaflet, Supabase, React Query         | [nearnow.juancode.dev](https://nearnow.juancode.dev)   |
+| TappMesa (CRM Rest.)   | React, Prisma, Supabase, Sentry               | [tappmesa.juancode.dev](https://tappmesa.juancode.dev) |
+| UptimeGuard            | Next.js, NextAuth, Prisma, Recharts           | [vigilante-online.lovable.app](https://vigilante-online.lovable.app) |
+
+## 🌐 Dominio
+
+El sitio está desplegado en **[juancodedev.dev](https://www.juancodedev.dev)** con Vercel.  
+Metadata completa con Open Graph y Twitter Cards configurada.
+
+## 📬 Contacto
 
 - **Email:** cl.jmunoz@gmail.com
-- **Phone:** (+56) 998 307 778
+- **Teléfono:** (+56) 998 307 778
 - **GitHub:** [@juancodedev](https://github.com/juancodedev)
 
 ## 📄 Licencia
 
-Este proyecto es personal y privado.
+Proyecto personal y privado.
