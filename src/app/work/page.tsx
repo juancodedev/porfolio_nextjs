@@ -18,91 +18,8 @@ import Link from 'next/link'
 import Image from 'next/image'
 import WorkSliderBtns from '@/components/WorkSliderBtns';
 import type { Swiper as SwiperType } from 'swiper';
+import { allProjects, categories, type Category } from '@/data/projects';
 
-const allProjects = [
-  {
-    num: '01',
-    category: 'fullstack',
-    title: 'Quilver CRM Archery club',
-    description: 'A comprehensive club management platform for archery organizations, featuring member tracking, score recording, training session management, attendance via QR codes, and role-based access control for admins, treasurers, and athletes.',
-    stack: [
-      { name: 'React' },
-      { name: 'TypeScript' },
-      { name: 'Vite' },
-      { name: 'Tailwind CSS' },
-      { name: 'Supabase' },
-      { name: 'Shadcn/ui' },
-      { name: 'React Query' },
-      { name: 'React Router' },
-      { name: 'Recharts' },
-      { name: 'Zod' },
-    ],
-    image: '/assets/work/QuilverCRM.png',
-    live: 'https://quiverapp.juancode.dev/',
-    github: '',
-  }, {
-    num: '02',
-    category: 'fullstack',
-    title: 'Map services - Find your spot',
-    description: 'An interactive mapping application that allows users to discover, pin, and manage spots on a live map. Built with Leaflet for geospatial visualization and Supabase for real-time data management.',
-    stack: [
-      { name: 'React' },
-      { name: 'TypeScript' },
-      { name: 'Vite' },
-      { name: 'Tailwind CSS' },
-      { name: 'Supabase' },
-      { name: 'Shadcn/ui' },
-      { name: 'Leaflet' },
-      { name: 'React Query' },
-      { name: 'React Router' },
-      { name: 'Zod' },
-    ],
-    image: '/assets/work/NearNow.png',
-    live: 'https://nearnow.juancode.dev/',
-    github: '',
-  }, {
-    num: '03',
-    category: 'fullstack',
-    title: 'CRM Restaurant - QR menu on table',
-    description: 'A modern restaurant table management SaaS that streamlines reservations, ordering, and table assignment workflows, with real-time monitoring, error tracking via Sentry, and serverless deployment on Vercel.',
-    stack: [
-      { name: 'React' },
-      { name: 'TypeScript' },
-      { name: 'Vite' },
-      { name: 'Tailwind CSS' },
-      { name: 'Supabase' },
-      { name: 'Prisma' },
-      { name: 'Radix UI' },
-      { name: 'React Router' },
-      { name: 'Sentry' },
-      { name: 'Vercel' },
-    ],
-    image: '/assets/work/TappMesa.png',
-    live: 'https://tappmesa.juancode.dev',
-    github: '',
-  }, {
-    num: '04',
-    category: 'fullstack',
-    title: 'UptimeGuard',
-    description: 'A SaaS uptime monitoring dashboard that tracks the availability and performance of services over time, featuring authentication via NextAuth, visual charts with Recharts, and a Prisma-powered database layer.',
-    stack: [
-      { name: 'Next.js' },
-      { name: 'TypeScript' },
-      { name: 'React' },
-      { name: 'Prisma' },
-      { name: 'NextAuth.js' },
-      { name: 'Recharts' },
-    ],
-    image: '/assets/work/UptimeGuard.png',
-    live: 'https://vigilante-online.lovable.app',
-    github: '',
-  },
-]
-
-const categories = ['all', 'frontend', 'fullstack', 'backend'] as const;
-type Category = typeof categories[number];
-
-// Max tags to show inline; the rest collapse into a "+N" badge
 const MAX_VISIBLE_STACK = 5;
 
 const Work = () => {
@@ -139,13 +56,12 @@ const Work = () => {
       className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0"
     >
       <div className="container mx-auto">
-        {/* Category filters */}
         <div className="flex flex-wrap gap-3 mb-8 justify-center xl:justify-start">
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => handleCategoryChange(cat)}
-              className={`px-5 py-2 rounded-full border text-sm font-medium capitalize transition-all duration-300 ${activeCategory === cat
+              className={`px-5 py-2 rounded-full border text-sm font-medium capitalize transition-all duration-300 focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2 ${activeCategory === cat
                 ? 'bg-accent text-primary border-accent'
                 : 'border-white/20 text-white/60 hover:border-accent hover:text-accent'
                 }`}
@@ -155,7 +71,6 @@ const Work = () => {
           ))}
         </div>
 
-        {/* Empty state */}
         {projects.length === 0 ? (
           <div className="flex flex-col items-center justify-center min-h-[400px] gap-4 text-center">
             <p className="text-6xl">🗂️</p>
@@ -164,19 +79,14 @@ const Work = () => {
           </div>
         ) : (
           <div className="flex flex-col xl:flex-row xl:gap-[30px]">
-            {/* Project info panel */}
             <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
               <div className="flex flex-col gap-[30px] h-[50%]">
-                {/* outline num */}
                 <div className="text-8xl leading-none font-extrabold text-transparent text-outline">{project?.num}</div>
-                {/* project title */}
                 <h2 className="text-[42px] font-bold leading-none text-white capitalize">
                   {project?.title}
                 </h2>
                 <span className="text-accent capitalize text-sm -mt-6">{project?.category} project</span>
-                {/* description */}
                 <p className="text-white/60">{project?.description}</p>
-                {/* stack — show max 5, rest as badge */}
                 <ul className="flex gap-3 flex-wrap items-center">
                   {visibleStack.map((item, index) => (
                     <li key={index} className="text-accent text-base">
@@ -190,15 +100,13 @@ const Work = () => {
                     </li>
                   )}
                 </ul>
-                {/* border */}
                 <div className="border border-white/20"></div>
-                {/* buttons */}
                 <div className="flex items-center gap-4">
                   {project?.live ? (
-                    <Link href={project.live} target="_blank" rel="noopener noreferrer">
+                    <Link href={project.live} target="_blank" rel="noopener noreferrer" aria-label="Live project">
                       <TooltipProvider delayDuration={100}>
                         <Tooltip>
-                          <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
+                          <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group" aria-label="Live project">
                             <BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
                           </TooltipTrigger>
                           <TooltipContent><p>Live Project</p></TooltipContent>
@@ -208,7 +116,7 @@ const Work = () => {
                   ) : (
                     <TooltipProvider delayDuration={100}>
                       <Tooltip>
-                        <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center opacity-30 cursor-not-allowed">
+                        <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center opacity-30 cursor-not-allowed" aria-label="No live demo available">
                           <BsArrowUpRight className="text-white text-3xl" />
                         </TooltipTrigger>
                         <TooltipContent><p>No live demo</p></TooltipContent>
@@ -216,10 +124,10 @@ const Work = () => {
                     </TooltipProvider>
                   )}
                   {project?.github ? (
-                    <Link href={project.github} target="_blank" rel="noopener noreferrer">
+                    <Link href={project.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub repository">
                       <TooltipProvider delayDuration={100}>
                         <Tooltip>
-                          <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
+                          <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group" aria-label="GitHub repository">
                             <BsGithub className="text-white text-3xl group-hover:text-accent" />
                           </TooltipTrigger>
                           <TooltipContent><p>Github repository</p></TooltipContent>
@@ -229,7 +137,7 @@ const Work = () => {
                   ) : (
                     <TooltipProvider delayDuration={100}>
                       <Tooltip>
-                        <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center opacity-30 cursor-not-allowed">
+                        <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center opacity-30 cursor-not-allowed" aria-label="Repository not available">
                           <BsGithub className="text-white text-3xl" />
                         </TooltipTrigger>
                         <TooltipContent><p>Repo not available</p></TooltipContent>
@@ -240,7 +148,6 @@ const Work = () => {
               </div>
             </div>
 
-            {/* Swiper */}
             <div className="w-full xl:w-[50%]">
               <Swiper
                 spaceBetween={30}
@@ -254,7 +161,14 @@ const Work = () => {
                     <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
                       <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
                       <div className="relative w-full h-full">
-                        <Image src={proj.image} fill className="object-cover" alt={proj.title} />
+                        <Image
+                          src={proj.image}
+                          fill
+                          className="object-cover"
+                          alt={proj.title}
+                          sizes="(max-width: 768px) 100vw, 50vw"
+                          loading={index === 0 ? "eager" : "lazy"}
+                        />
                       </div>
                     </div>
                   </SwiperSlide>

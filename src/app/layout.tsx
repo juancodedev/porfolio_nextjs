@@ -9,7 +9,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
+  weight: ["300", "400", "500", "700"],
   variable: '--font-jetbrainsMono'
 });
 
@@ -54,7 +54,8 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  // Add google: "your-code" here once you have a Google Search Console verification code
+  // TODO: Add Google Search Console verification code
+  // verification: { google: "your-code" },
 };
 
 export default function RootLayout({
