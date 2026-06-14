@@ -1,59 +1,58 @@
 import Photo from "@/components/Photo"
 import Social from "@/components/Social"
-import Stats from "@/components/Stats"
 import { Button } from "@/components/ui/button"
-import { FiDownload } from "react-icons/fi"
+import Link from "next/link"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Home",
-  description: "Juan Muñoz - Full Stack Developer with expertise in Python, JavaScript, React, Next.js and AWS. Building elegant digital experiences with modern technologies.",
+  description: "Juan Muñoz — 19 years in technology. Building software that solves real problems with Python, React, Next.js, and AWS.",
 }
 
 const Home = () => {
   return (
-    <section className="h-full">
-      <div className="container mx-auto h-full">
-        <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
-          {/* texto */}
-          <div className="text-center xl:text-left order-2 xl:order-none">
-            <span className="text-xl">Software Developer</span>
-            <h1 className="h1">
-              Hello I&apos;m <br /> <span className="text-accent">Juan Muñoz</span>
-            </h1>
-            <p className="max-w-[500px] mb-9 text-white/80">
-              Full Stack Developer with 3+ years in Python & React. I build scalable systems, integrate cloud services with AWS, and have shipped production apps used by real companies.
+    <section className="min-h-[80vh] flex items-center">
+      <div className="container mx-auto">
+        <div className="flex flex-col xl:flex-row items-center justify-between gap-12 xl:gap-16 py-12 xl:py-24">
+          {/* Text content */}
+          <div className="text-center xl:text-left order-2 xl:order-none max-w-[600px]">
+            <p className="text-lg font-medium text-muted-foreground mb-3">
+              Full-Stack Developer
             </p>
-            {/* buttons and socials */}
-            <div className="flex flex-col xl:flex-row items-center gap-8">
-              <a
-                href="/CV_Juan_Munoz_Castillo_abr_2026.pdf"
-                download
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="uppercase flex items-center gap-2">
-                  <span> Download CV</span>
-                  <FiDownload className="text-xl" />
-                </Button>
-              </a>
-              <div className="mb-8 xl:mb-0">
-                <Social containerStyles="flex gap-6" iconStyles="w-9 h-9 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500">
+            <h1 className="text-4xl sm:text-5xl xl:text-6xl font-serif font-bold text-foreground leading-[1.1] mb-6">
+              Juan{" "}
+              <span className="text-primary">Muñoz</span>
+            </h1>
+            <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-8 max-w-[520px]">
+              19 years in technology. The last 3+ building software that solves real problems.
+            </p>
 
-                </Social>
-              </div>
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row items-center gap-4 mb-8">
+              <Link href="/contact">
+                <Button size="lg">
+                  Get in touch
+                </Button>
+              </Link>
+              <Link href="/work">
+                <Button variant="outline" size="lg">
+                  View my work
+                </Button>
+              </Link>
+            </div>
+
+            {/* Social links */}
+            <div className="flex justify-center xl:justify-start">
+              <Social containerStyles="flex gap-4" />
             </div>
           </div>
+
           {/* Photo */}
-          <div className="order-1 xl:order-none mb-8 xl:mb-0">
+          <div className="order-1 xl:order-none">
             <Photo />
           </div>
         </div>
       </div>
-      <Stats />
     </section>
   )
 }
