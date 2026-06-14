@@ -17,37 +17,18 @@ const Photo = () => {
                     },
                 }}
             >
-                {/* Image — no mix-blend-lighten, clean on light background */}
-                <div className="w-[310px] h-[310px] xl:w-[510px] xl:h-[510px] relative">
+                {/* Photo — rounded corners, no circular crop, clean on light background */}
+                <div className="w-[300px] h-[360px] xl:w-[460px] xl:h-[540px] relative">
                     <Image
                         src="/assets/new_profile.svg"
                         priority
                         quality={100}
                         fill
                         alt="Juan Muñoz"
-                        className="pt-[23px] pb-[8px] pr-[15px] pl-[15px] rounded-full"
+                        className="rounded-3xl object-cover object-top"
                         fetchPriority="high"
                     />
                 </div>
-                {/* Static subtle ring — no spinning animation */}
-                <svg
-                    className="absolute top-0 left-0 w-[310px] xl:w-[510px] h-[310px] xl:h-[510px]"
-                    fill="transparent"
-                    viewBox="0 0 506 506"
-                    xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true"
-                >
-                    <circle
-                        cx="253"
-                        cy="253"
-                        r="250"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="text-primary/20"
-                    />
-                </svg>
             </motion.div>
         </div>
     )

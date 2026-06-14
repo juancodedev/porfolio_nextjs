@@ -1,0 +1,53 @@
+schema: spec-driven
+
+context: |
+  Tech stack: Next.js 16.2.4 (App Router, RSC), React 19.2, TypeScript 6 (strict), Tailwind CSS 3.4 + tailwindcss-animate, shadcn/ui (Radix), Framer Motion 12, Swiper 12, React Hook Form + Zod
+  Architecture: Next.js App Router with ISR/RSC, path alias @/* → ./src/*, components in src/components/ (shared + ui shadcn), data in src/data/, lib in src/lib/
+  Testing: No test runner, no test files, no CI/CD
+  Style: Tailwind CSS with shadcn/ui tokens (CSS variables), JetBrains Mono font, clsx + tailwind-merge + cva
+
+rules:
+  proposal:
+    - Include rollback plan for risky changes
+  specs:
+    - Use Given/When/Then for scenarios
+    - Use RFC 2119 keywords (MUST, SHALL, SHOULD, MAY)
+  design:
+    - Include sequence diagrams for complex flows
+    - Document architecture decisions with rationale
+  tasks:
+    - Group by phase, use hierarchical numbering
+    - Keep tasks completable in one session
+  apply:
+    - Follow existing code patterns (Next.js App Router, shadcn/ui conventions)
+    tdd: false
+    test_command: ""
+  verify:
+    test_command: "pnpm lint && pnpm build"
+    build_command: "pnpm build"
+    coverage_threshold: 0
+  archive:
+    - Warn before merging destructive deltas
+
+testing:
+  strict_tdd: false
+  runner:
+    available: false
+    command: ""
+  layers:
+    unit: false
+    integration: false
+    e2e: false
+  coverage:
+    available: false
+    command: ""
+  quality:
+    linter:
+      available: true
+      command: "pnpm lint"
+    type_checker:
+      available: true
+      command: "pnpm exec tsc --noEmit"
+    formatter:
+      available: false
+      command: ""
