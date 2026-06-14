@@ -9,19 +9,24 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   weight: ["400", "500"],
-  variable: '--font-jetbrainsMono'
+  variable: '--font-jetbrainsMono',
+  display: 'swap',
+  preload: false,
 });
 
 const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "500", "600"],
-  variable: '--font-inter'
+  variable: '--font-inter',
+  display: 'swap',
 });
 
 const sourceSerif4 = Source_Serif_4({
   subsets: ["latin"],
   weight: ["400", "600", "700"],
-  variable: '--font-source-serif'
+  variable: '--font-source-serif',
+  display: 'swap',
+  preload: true,
 });
 
 export const metadata: Metadata = {
@@ -30,7 +35,7 @@ export const metadata: Metadata = {
     default: "Juan Muñoz - Full Stack Developer Portfolio",
     template: "%s | Juan Muñoz"
   },
-  description: "Full Stack Developer specializing in Python, JavaScript, React, Next.js, and AWS. Over 3 years of experience building modern web applications and cloud solutions.",
+  description: "Full Stack Developer with 19 years in IT and 3+ years building modern web applications. Specialized in Python, React, Next.js, AWS, and cloud solutions.",
   keywords: ["Full Stack Developer", "Python", "JavaScript", "React", "Next.js", "AWS", "PostgreSQL", "Web Development", "Software Engineer", "Juan Muñoz"],
   authors: [{ name: "Juan Muñoz", url: "https://github.com/juancodedev" }],
   creator: "Juan Muñoz",
@@ -39,7 +44,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://www.juancodedev.dev",
     title: "Juan Muñoz - Full Stack Developer Portfolio",
-    description: "Full Stack Developer specializing in Python, JavaScript, React, Next.js, and AWS. Over 3 years of experience building modern web applications.",
+    description: "Full Stack Developer with 19 years in IT and 3+ years building modern applications. Python, React, Next.js, AWS.",
     siteName: "Juan Muñoz Portfolio",
     images: [{
       url: "/profile.png",
