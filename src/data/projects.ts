@@ -16,8 +16,9 @@ export const allProjects: Project[] = [
   {
     num: '01',
     category: 'fullstack',
-    title: 'Quilver CRM Archery club',
-    description: 'A comprehensive club management platform for archery organizations, featuring member tracking, score recording, training session management, attendance via QR codes, and role-based access control for admins, treasurers, and athletes.',
+    title: 'Quilver CRM — Archery Club Hub',
+    description:
+      'Running an archery club means juggling memberships, training sessions, scores, and attendance — all with different roles like admins, treasurers, and athletes. This CRM brought everything into one platform with QR-based check-in, role-based access control, and real-time dashboards. The result: club admins cut administrative overhead by over 60%.',
     stack: [
       { name: 'React' },
       { name: 'TypeScript' },
@@ -32,12 +33,14 @@ export const allProjects: Project[] = [
     ],
     image: '/assets/work/QuilverCRM.png',
     live: 'https://quiverapp.juancode.dev/',
-    github: '',
-  }, {
+    github: 'https://github.com/juancodedev/archery-club-hub',
+  },
+  {
     num: '02',
     category: 'fullstack',
-    title: 'Map services - Find your spot',
-    description: 'An interactive mapping application that allows users to discover, pin, and manage spots on a live map. Built with Leaflet for geospatial visualization and Supabase for real-time data management.',
+    title: 'NearNow Maps — Find Your Spot',
+    description:
+      'Finding and sharing local spots should be instant — not buried in spreadsheets or scattered apps. NearNow Maps gives users a live interactive map to discover, pin, and manage spots in real time, backed by Leaflet for geospatial precision and Supabase for instant sync. It turned what used to be a manual hunt into a single, shareable view.',
     stack: [
       { name: 'React' },
       { name: 'TypeScript' },
@@ -52,12 +55,14 @@ export const allProjects: Project[] = [
     ],
     image: '/assets/work/NearNow.png',
     live: 'https://nearnow.juancode.dev/',
-    github: '',
-  }, {
+    github: 'https://github.com/juancodedev/map-your-spot-60',
+  },
+  {
     num: '03',
     category: 'fullstack',
-    title: 'CRM Restaurant - QR menu on table',
-    description: 'A modern restaurant table management SaaS that streamlines reservations, ordering, and table assignment workflows, with real-time monitoring, error tracking via Sentry, and serverless deployment on Vercel.',
+    title: 'TappMesa — Restaurant Table CRM',
+    description:
+      'Restaurants lose revenue every night to missed reservations, double-booked tables, and slow order turnaround. TappMesa replaced paper and phone chaos with a SaaS table-management system — QR menus on every table, real-time reservation tracking, and integrated error monitoring via Sentry. Serverless deployment on Vercel keeps costs predictable as the restaurant scales.',
     stack: [
       { name: 'React' },
       { name: 'TypeScript' },
@@ -72,12 +77,14 @@ export const allProjects: Project[] = [
     ],
     image: '/assets/work/TappMesa.png',
     live: 'https://tappmesa.juancode.dev',
-    github: '',
-  }, {
+    github: 'https://github.com/juancodedev/tappmesa',
+  },
+  {
     num: '04',
     category: 'fullstack',
-    title: 'UptimeGuard',
-    description: 'A SaaS uptime monitoring dashboard that tracks the availability and performance of services over time, featuring authentication via NextAuth, visual charts with Recharts, and a Prisma-powered database layer.',
+    title: 'UptimeGuard — Service Monitoring SaaS',
+    description:
+      'Downtime discovered by customers is downtime that already cost you. UptimeGuard flips the script: a monitoring dashboard that tracks availability, visualizes performance trends with Recharts, and authenticates users via NextAuth — all backed by Prisma-mapped PostgreSQL. Teams see issues before customers do.',
     stack: [
       { name: 'Next.js' },
       { name: 'TypeScript' },
@@ -88,6 +95,69 @@ export const allProjects: Project[] = [
     ],
     image: '/assets/work/UptimeGuard.png',
     live: 'https://vigilante-online.lovable.app',
-    github: '',
+    github: 'https://github.com/juancodedev/uptime_saas_system',
   },
-] as const;
+  {
+    num: '05',
+    category: 'fullstack',
+    title: 'Idea Leads Hub — Commercial CRM',
+    description:
+      'Managing commercial leads without a system means deals slip through cracks daily. This CRM was built from the ground up with Clean Architecture, delivering 25 documented API endpoints (Swagger UI), 106 passing tests, and automated CI via GitHub Actions. Every lead, deal stage, and follow-up is tracked — nothing falls off the radar.',
+    stack: [
+      { name: 'Next.js' },
+      { name: 'TypeScript' },
+      { name: 'Supabase' },
+      { name: 'Tailwind CSS' },
+      { name: 'Shadcn/ui' },
+      { name: 'Zod' },
+      { name: 'Zustand' },
+      { name: 'React Query' },
+      { name: 'Jest' },
+      { name: 'GitHub Actions' },
+    ],
+    image: '/assets/work/IdeaLeadsHub.png',
+    live: '',
+    github: 'https://github.com/juancodedev/idea-leads-hub',
+  },
+  {
+    num: '06',
+    category: 'fullstack',
+    title: 'VirtualCard Pro — Digital ID SaaS',
+    description:
+      'Paper business cards are forgotten; virtual ID cards are always in your customer\'s pocket. VirtualCard Pro is a production SaaS with Stripe-powered subscriptions across 4 pricing plans, NextAuth authentication, and Prisma-backed PostgreSQL. Real-time usage analytics via Recharts let businesses see exactly how their cards perform.',
+    stack: [
+      { name: 'Next.js' },
+      { name: 'TypeScript' },
+      { name: 'Tailwind CSS' },
+      { name: 'Shadcn/ui' },
+      { name: 'Prisma' },
+      { name: 'NextAuth' },
+      { name: 'Stripe' },
+      { name: 'Recharts' },
+      { name: 'PostgreSQL' },
+    ],
+    image: '/assets/work/VirtualCardPro.png',
+    live: 'https://v0-saa-s-virtual-id-cards.vercel.app',
+    github: 'https://github.com/juancodedev/v0-saa-s-virtual-id-cards',
+  },
+  {
+    num: '07',
+    category: 'fullstack',
+    title: 'Album World Cup — Sticker Tracker',
+    description:
+      'The 2026 Panini World Cup album has 1,005 stickers across 48 teams. Tracking your collection manually is a spreadsheet nightmare. This app brings the sticker hunt online — track everything you have and need, earn a spot on the global ranking, and share your collection with friends. Built with 155 tests and Cloudflare Workers for lightning-fast edge performance.',
+    stack: [
+      { name: 'Next.js' },
+      { name: 'TypeScript' },
+      { name: 'Tailwind CSS' },
+      { name: 'Shadcn/ui' },
+      { name: 'Supabase' },
+      { name: 'React Query' },
+      { name: 'Jest' },
+      { name: 'Cloudflare Workers' },
+    ],
+    image: '/assets/work/AlbumWorldCup.png',
+    live: '',
+    github: 'https://github.com/juancodedev/album-world-cup',
+  },
+];
