@@ -21,7 +21,9 @@ const config = {
       xl: '1200px',
     },
     fontFamily: {
-      primary: "var(--font-jetbrainsMono)",
+      serif: ["var(--font-source-serif)", "Georgia", "serif"],
+      sans: ["var(--font-inter)", "system-ui", "sans-serif"],
+      mono: ["var(--font-jetbrainsMono)", "monospace"],
     },
     extend: {
       colors: {
@@ -30,11 +32,10 @@ const config = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        primary: "#1C1C22",
-        // primary: {
-        //   DEFAULT: "hsl(var(--primary))",
-        //   foreground: "hsl(var(--primary-foreground))",
-        // },
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+        },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
@@ -48,8 +49,8 @@ const config = {
           foreground: "hsl(var(--muted-foreground))",
         },
         accent: {
-          DEFAULT: "#00ff99",//"hsl(var(--accent))",
-          hover: "#00e187",
+          DEFAULT: "hsl(var(--accent))",
+          hover: "hsl(var(--accent-hover))",
           foreground: "hsl(var(--accent-foreground))",
         },
         popover: {

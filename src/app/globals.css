@@ -3,27 +3,40 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --background: 60 9% 98%;
+    --foreground: 0 0% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
+    --primary: 175 84% 32%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 60 5% 96%;
+    --secondary-foreground: 0 0% 10%;
+    --muted: 60 5% 96%;
+    --muted-foreground: 33 5% 42%;
+    --accent: 175 84% 32%;
+    --accent-foreground: 0 0% 100%;
+    --accent-hover: 175 80% 26%;
+    --border: 24 6% 90%;
+    --input: 24 6% 90%;
+    --ring: 175 84% 32%;
+    --radius: 0.5rem;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+  }
+
   body {
-    @apply font-primary bg-primary text-white leading-loose;
+    @apply bg-background text-foreground leading-loose;
+    font-family: var(--font-inter), system-ui, sans-serif;
   }
 
-  .h1 {
-    @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-source-serif), Georgia, serif;
   }
 
-  .h2 {
-    @apply text-[36px] xl:text-[48px] leading-[1.1] font-semibold
-  }
-
-  .h3 {
-    @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold
-  }
-
-  .text-outline {
-    -webkit-text-stroke: 1px #ffffff;
-  }
-  
-  .text-outline-hover {
-    -webkit-text-stroke: 1px #00ff99;
+  code, pre, kbd, samp {
+    font-family: var(--font-jetbrainsMono), monospace;
   }
 }
