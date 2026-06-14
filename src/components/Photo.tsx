@@ -20,7 +20,7 @@ const Photo = () => {
                 {/* Photo — rounded corners, no circular crop, clean on light background */}
                 <div className="w-[300px] h-[360px] xl:w-[460px] xl:h-[540px] relative">
                     <Image
-                        src="/assets/new_profile.svg"
+                        src="/assets/new_profile.webp"
                         priority
                         quality={100}
                         fill
