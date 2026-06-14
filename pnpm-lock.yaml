@@ -112,6 +112,15 @@ importers:
         specifier: ^6.0.3
         version: 6.0.3
 
+  overrides:
+    minimatch: ^9.0.5
+    glob: ^10.4.5
+    picomatch: ^4.0.2
+    brace-expansion: ^2.0.1
+    postcss: ^8.4.38
+    js-yaml: ^4.1.0
+    flatted: ^3.3.1
+
 packages:
 
   '@alloc/quick-lru@5.2.0':
