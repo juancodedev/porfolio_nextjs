@@ -3,7 +3,8 @@
 import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { ExternalLink, Github } from "lucide-react"
+import { ExternalLink } from "lucide-react"
+import { BsGithub } from "react-icons/bs"
 
 interface ProjectCardProps {
   title: string
@@ -101,7 +102,7 @@ const ProjectCard = ({
               className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary/80 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded"
               aria-label={`View ${title} source on GitHub`}
             >
-              <Github className="w-4 h-4" />
+              <BsGithub className="w-4 h-4" />
               <span>GitHub</span>
             </Link>
           )}
