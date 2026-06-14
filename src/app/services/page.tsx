@@ -1,76 +1,83 @@
 "use client";
 
-import { BsArrowDownRight } from "react-icons/bs"
-import Link from "next/link"
 import { motion } from "framer-motion";
+import { Code2, Server, Workflow, Lightbulb } from "lucide-react";
+import ServiceCard from "@/components/ServiceCard";
 
 const services = [
-    {
-        num: '01',
-        title: 'Web Development',
-        description: 'I can help transform your online venture with a professional, functional website. With experience in web development and modern technologies, I\'ll create a secure, fast, and adaptable platform tailored to your needs. While you focus on your business, I\'ll handle the tech.',
-        href: "/contact?service=Web+Development"
-    }, {
-        num: '02',
-        title: 'Backend Developer',
-        description: 'I\'ll develop a robust and scalable backend to support all your business operations. With experience in Python, Java, and AWS, I\'ll create efficient and secure solutions, optimizing your system\'s performance so you can focus on growing your business.',
-        href: "/contact?service=Systems+Integration"
-    }, {
-        num: '03',
-        title: 'Systems Integration',
-        description: 'I\'ll help you seamlessly integrate your systems and tools, ensuring smooth communication between them. My experience in integration guarantees that your tech infrastructure works in harmony, improving efficiency and reducing costs.',
-        href: "/contact?service=Systems+Integration"
-    }, {
-        num: '04',
-        title: 'Technology Consulting',
-        description: 'I offer specialized consulting to help you choose and use the best technologies for your business. Together, we\'ll implement solutions that maximize performance and keep you competitive in a constantly evolving market.',
-        href: "/contact?service=Technology+Consulting"
-    }
-]
+  {
+    num: "01",
+    title: "Web Development",
+    description:
+      "Your online presence is your hardest-working salesperson — 24/7, never off the clock. I build fast, accessible, and responsive web applications that turn visitors into customers. From landing pages to full-scale platforms, every pixel and interaction is crafted to drive real business results, not just look good in a portfolio.",
+    href: "/contact?service=Web+Development",
+    icon: Code2,
+  },
+  {
+    num: "02",
+    title: "Backend Development",
+    description:
+      "Great user experiences start with invisible infrastructure. I design and build robust, scalable backend systems that handle your business logic, data, and integrations — so your app stays fast and reliable as you grow. Think of it as the engine room: you never see it, but you feel it every time something just works.",
+    href: "/contact?service=Backend+Development",
+    icon: Server,
+  },
+  {
+    num: "03",
+    title: "Systems Integration",
+    description:
+      "Your tools should talk to each other — not to your team. I connect CRMs, payment gateways, analytics, and third-party APIs into a single cohesive workflow. The result: data flows automatically, manual entry disappears, and your team spends time on decisions, not data entry.",
+    href: "/contact?service=Systems+Integration",
+    icon: Workflow,
+  },
+  {
+    num: "04",
+    title: "Technology Consulting",
+    description:
+      "Choosing the right tech stack can make or break a project before a single line of code is written. I work alongside your team to evaluate tradeoffs, validate architecture decisions, and chart a pragmatic path forward — one that balances speed, cost, and long-term maintainability. No hype, no vendor lock-in, just honest engineering judgment.",
+    href: "/contact?service=Technology+Consulting",
+    icon: Lightbulb,
+  },
+];
 
 const Services = () => {
-    return (
-        <section className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0">
-            <div className="container mx-auto">
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{
-                        opacity: 1,
-                        transition: {
-                            delay: 0.6,
-                            duration: 0.4,
-                            ease: "easeIn"
-                        },
-                    }}
-                    className="grid grid-cols-1 md:grid-cols-2 gap-[60px]"
-                >
-                    {services.map((service, index) => (
-                        <div key={index} className="flex-1 flex flex-col justify-center gap-6 group">
-                            {/* TOP */}
-                            <div className="w-full flex justify-between items-center">
-                                <div className="text-5xl font-extrabold text-outline text-transparent group-hover:text-outline-hover transition-all duration-500">
-                                    {service.num}
-                                </div>
-                                <Link
-                                    href={service.href}
-                                    className="w-[70px] h-[70px] rounded-full bg-white group-hover:bg-accent transition-all duration-500 flex justify-center items-center hover:-rotate-45"
-                                >
-                                    <BsArrowDownRight className="text-primary text-3xl" />
-                                </Link>
-                            </div>
-                            {/* title */}
-                            <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500">
-                                {service.title}
-                            </h2>
-                            {/* description */}
-                            <p className="text-white/60">{service.description}</p>
-                            {/* border */}
-                            <div className="border-b border-white/20 w-full"></div>
-                        </div>
-                    ))}
-                </motion.div>
-            </div>
-        </section>
-    )
-}
-export default Services
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{
+        opacity: 1,
+        transition: { delay: 0.4, duration: 0.4, ease: "easeIn" },
+      }}
+      className="min-h-[80vh] flex flex-col py-12"
+    >
+      <div className="container mx-auto max-w-[1200px] px-4 md:px-8">
+        {/* Section intro */}
+        <div className="text-center max-w-2xl mx-auto mb-16">
+          <h1 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4">
+            How I can help
+          </h1>
+          <p className="text-lg text-muted-foreground leading-relaxed">
+            Technology is the means — your business goals are the end. Every
+            engagement starts by understanding what success looks like for you,
+            and then building the right solution to get there. Together.
+          </p>
+        </div>
+
+        {/* Service cards grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {services.map((service) => (
+            <ServiceCard
+              key={service.num}
+              num={service.num}
+              title={service.title}
+              description={service.description}
+              icon={service.icon}
+              href={service.href}
+            />
+          ))}
+        </div>
+      </div>
+    </motion.div>
+  );
+};
+
+export default Services;
