@@ -17,15 +17,15 @@ const Photo = () => {
                     },
                 }}
             >
-                {/* Photo — rounded corners, no circular crop, clean on light background */}
-                <div className="w-[300px] h-[360px] xl:w-[460px] xl:h-[540px] relative">
+                {/* Image — clean circular photo on light background */}
+                <div className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] relative">
                     <Image
                         src="/assets/new_profile.svg"
                         priority
                         quality={100}
                         fill
                         alt="Juan Muñoz"
-                        className="rounded-3xl object-cover object-top"
+                        className="rounded-full object-cover"
                         fetchPriority="high"
                     />
                 </div>
