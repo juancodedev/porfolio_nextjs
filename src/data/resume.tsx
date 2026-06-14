@@ -14,34 +14,25 @@ import type { ReactNode } from "react"
 
 export const about = {
   title: "About Me",
-  description: "Professional with more than 19 years of experience in the IT area, currently working as a systems developer. I am a resolute, dynamic professional with a great interest in developing innovative solutions through the use of technology. I have a strong capacity for diagnosing and resolving complex incidents, and I'm able to assume responsibilities and make assertive decisions. I have a great capacity to learn and apply my knowledge in professional environments.",
-  info: [
-    { fieldName: "Name", fieldValue: "Juan Muñoz." },
-    { fieldName: "Phone", fieldValue: "(+56) 998 307 778" },
-    { fieldName: "Experience", fieldValue: "+3 Years" },
-    { fieldName: "Nationality", fieldValue: "Chilean" },
-    { fieldName: "Email", fieldValue: "cl.jmunoz@gmail.com" },
-    { fieldName: "Freelance", fieldValue: "Available" },
-    { fieldName: "Languages", fieldValue: "Spanish/English" },
-  ],
+  description: "For over 19 years, I have worked across the IT landscape — from technical support and network administration to software engineering and teaching at DUOC UC. The last 3+ years have been dedicated entirely to building software: full-stack applications, cloud architectures, and systems that solve real problems. I combine deep operational knowledge with modern development practices, bringing a unique perspective to every project. Whether diagnosing production incidents or designing greenfield solutions from scratch, I am driven by one question: what actually works?",
 } as const;
 
 export const experience = {
   icon: '/assets/resume/badge.svg',
   title: 'My experience',
-  description: 'I am a systems developer with over 19 years of IT experience. I specialize in Python, JavaScript, and Java, with expertise in AWS Services, PostgreSQL, and Linux. I am resourceful, dynamic, and have a natural ability to learn quickly and adapt to new technologies. I enjoy challenges and always maintain a proactive, results-oriented approach. With experience in agile methodologies such as Scrum and a strong commitment to Clean Code and SOLID principles, I ensure quality and sustainability in software development. Additionally, I have experience in solution architecture design, planning, development, deployment, and production implementation.',
+  description: "Across two decades in technology, I have built systems as a developer, solved problems as a technical support engineer, and shared knowledge as a university instructor. Each role has sharpened a different edge of my craft — from understanding how infrastructure fails to knowing how users think.",
   items: [
-    { company: "HCMFront, Santiago", position: "Full Stack Developer Jr.", duration: "2024-Oct. -> Today." },
-    { company: "BST Corp., Santiago", position: "Full Stack Developer Jr.", duration: "2021-Dec. -> 2024-Mar." },
-    { company: "DUOC UC, Maipú", position: "Teacher", duration: "2023-Mar. -> 2023-Ago." },
-    { company: "Quintec Chile S.A.", position: "Technical Support", duration: "2003, May. -> 2018, Mar." },
+    { company: "HCMFront, Santiago", position: "Full Stack Developer", duration: "2024-Oct. → Today." },
+    { company: "BST Corp., Santiago", position: "Full Stack Developer", duration: "2021-Dec. → 2024-Mar." },
+    { company: "DUOC UC, Maipú", position: "Teacher", duration: "2023-Mar. → 2023-Ago." },
+    { company: "Quintec Chile S.A.", position: "Technical Support", duration: "2003, May. → 2018, Mar." },
   ],
 } as const;
 
 export const education = {
   icon: '/assets/resume/cap.svg',
   title: 'My Education',
-  description: 'My academic background includes a degree as a Network Administration Technician and a recent degree in Computer Engineering at DUOC UC. This institution has provided me with tools and knowledge in agile project management, software architecture, systems development and various programming languages such as Java, C#, Python, I am currently training in React and next.js technologies to update my knowledge.',
+  description: "My academic foundation combines network administration with computer engineering from DUOC UC. Continuous learning is central to my practice — recent specializations in UX/UI design, agile project management, and digital entrepreneurship keep me at the intersection of technology and business value.",
   items: [
     { institution: "DUOC UC, Santiago", degree: "Computer Engineering", duration: "2021" },
     { institution: "DUOC UC, Santiago", degree: "Network Management Technician", duration: "2010" },
