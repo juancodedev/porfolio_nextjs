@@ -12,10 +12,10 @@ const MobileNav = () => {
 
     return (
         <Sheet open={open} onOpenChange={setOpen}>
-            <SheetTrigger className="flex justify-center items-center">
+            <SheetTrigger className="flex justify-center items-center" aria-label="Open menu">
                 <CiMenuFries className="text-[32px] text-accent" />
             </SheetTrigger>
-            <SheetContent className="flex flex-col">
+            <SheetContent className="flex flex-col text-foreground">
                 <div className="mt-32 mb-40 text-center text-2xl">
                     <Link href="/" onClick={() => setOpen(false)}>
                         <h1 className="text-4xl font-semibold">
@@ -31,7 +31,7 @@ const MobileNav = () => {
                             onClick={() => setOpen(false)}
                             className={`${link.path === pathname
                                     ? "text-accent border-b-2 border-accent"
-                                    : ""
+                                    : "text-foreground"
                                 } text-xl capitalize hover:text-accent transition-all`}
                         >
                             {link.name}
