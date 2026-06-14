@@ -31,16 +31,16 @@ const ProjectCard = ({
       initial={{ opacity: 0, y: 20 }}
       transition={{ duration: 0.4, ease: "easeOut" }}
       viewport={{ once: true }}
-      className="group flex flex-col sm:flex-row bg-card border border-border rounded-lg overflow-hidden hover:scale-[1.02] hover:shadow-md transition-all duration-200"
+      className="group flex flex-col bg-card border border-border rounded-lg overflow-hidden hover:scale-[1.02] hover:shadow-md transition-all duration-200"
     >
-      {/* Image */}
-      <div className="relative w-full sm:w-2/5 min-h-[200px] sm:min-h-full">
+      {/* Image — full width on top, landscape screenshots */}
+      <div className="relative w-full aspect-video">
         <Image
           src={image}
           alt={title}
           fill
-          className="object-cover"
-          sizes="(max-width: 640px) 100vw, 40vw"
+          className="object-cover object-left-top"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div>
 
