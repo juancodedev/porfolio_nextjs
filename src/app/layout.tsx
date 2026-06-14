@@ -1,16 +1,27 @@
 import type { Metadata } from "next";
-import { JetBrains_Mono } from "next/font/google";
+import { JetBrains_Mono, Inter, Source_Serif_4 } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import PageTransition from "@/components/PageTransition";
-import StairTransition from "@/components/StairTransition";
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "700"],
+  weight: ["400", "500"],
   variable: '--font-jetbrainsMono'
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: '--font-inter'
+});
+
+const sourceSerif4 = Source_Serif_4({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+  variable: '--font-source-serif'
 });
 
 export const metadata: Metadata = {
@@ -65,15 +76,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={jetbrainsMono.variable}>
+      <body className={`${jetbrainsMono.variable} ${inter.variable} ${sourceSerif4.variable}`}>
         <SpeedInsights />
         <Analytics />
         <Header />
-        <StairTransition />
         <PageTransition>
           {children}
         </PageTransition>
-
       </body>
     </html>
   );
