@@ -18,7 +18,7 @@ export const allProjects: Project[] = [
     category: 'fullstack',
     title: 'Quilver CRM — Archery Club Hub',
     description:
-      'Running an archery club means juggling memberships, training sessions, scores, and attendance — all with different roles like admins, treasurers, and athletes. This CRM brought everything into one platform with QR-based check-in, role-based access control, and real-time dashboards. The result: club admins cut administrative overhead by over 60%.',
+      'Running an archery club means juggling memberships, training sessions, scores, and attendance — all with different roles. This SaaS platform brought everything into one place: QR check-in with GPS validation (Haversine algorithm) to prevent fake remote mark-ins, Mercado Pago subscriptions across 3 plans, and real-time dashboards. Built with 26 routes and 75 SQL migrations.',
     stack: [
       { name: 'React' },
       { name: 'TypeScript' },
@@ -30,6 +30,7 @@ export const allProjects: Project[] = [
       { name: 'React Router' },
       { name: 'Recharts' },
       { name: 'Zod' },
+      { name: 'Mercado Pago' },
     ],
     image: '/assets/work/QuilverCRM.png',
     live: 'https://quiverapp.juancode.dev/',
@@ -159,5 +160,27 @@ export const allProjects: Project[] = [
     image: '/assets/work/AlbumWorldCup.png',
     live: '',
     github: 'https://github.com/juancodedev/album-world-cup',
+  },
+  {
+    num: '08',
+    category: 'fullstack',
+    title: 'Wootric SaaS — Multi-Tenant Platform',
+    description:
+      'True multi-tenancy is one of the hardest architectural problems in SaaS. Wootric was built from the ground up with Next.js 16, Cloudflare Workers, and Supabase — completing 18 development stages. It features an 11-step authentication middleware (JWT, rate limiting, CSRF, RBAC, feature flags, quota check, audit log), 3 decoupled workers via Cloudflare Queues (Excel/PDF export to R2, sync, Stripe webhooks), and a role-based access system with 19 permissions across 4 roles.',
+    stack: [
+      { name: 'Next.js' },
+      { name: 'TypeScript' },
+      { name: 'Cloudflare Workers' },
+      { name: 'Cloudflare KV' },
+      { name: 'Cloudflare R2' },
+      { name: 'Cloudflare Queues' },
+      { name: 'Supabase' },
+      { name: 'Drizzle ORM' },
+      { name: 'Stripe' },
+      { name: 'Tailwind CSS' },
+    ],
+    image: '/assets/work/Wootric.png',
+    live: '',
+    github: 'https://github.com/juancodedev/wootric-saas',
   },
 ];

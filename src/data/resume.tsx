@@ -7,7 +7,8 @@ import { BiLogoPostgresql } from "react-icons/bi"
 import {
   SiTailwindcss, SiNextdotjs, SiTypescript,
   SiHeroku, SiJira, SiSonarqubeserver, SiVercel,
-  SiMysql, SiGithubactions,
+  SiMysql, SiGithubactions, SiCloudflare, SiDrizzle,
+  SiMercadopago, SiFlask,
 } from "react-icons/si"
 import { DiScrum } from "react-icons/di"
 import type { ReactNode } from "react"
@@ -20,7 +21,7 @@ export const about = {
 export const experience = {
   icon: '/assets/resume/badge.svg',
   title: 'My experience',
-  description: "Across two decades in technology, I have built systems as a developer, solved problems as a technical support engineer, and shared knowledge as a university instructor. Each role has sharpened a different edge of my craft — from understanding how infrastructure fails to knowing how users think.",
+  description: "Across two decades in technology, I have built systems as a developer, solved problems as a technical support engineer, and shared knowledge as a university instructor. Each role has sharpened a different edge of my craft — from optimizing serverless pipelines that cut processing time by 30% to refactoring legacy Django codebases for maintainability.",
   items: [
     { company: "HCMFront, Santiago", position: "Full Stack Developer", duration: "2024-Oct. → Today." },
     { company: "BST Corp., Santiago", position: "Full Stack Developer", duration: "2021-Dec. → 2024-Mar." },
@@ -40,6 +41,18 @@ export const education = {
     { institution: "AIEP/Sense y Fundacion Telefonica", degree: "Diploma in Web Design and Programming", duration: "100h, 2025" },
     { institution: "IPCHILE/Sense y Fundacion Telefonica", degree: "Diploma in Entrepreneurship and Digital Management", duration: "90h, 2025" },
     { institution: "Universidad Playa Ancha/Sense y Fundacion Telefonica", degree: "Diploma in Agile Project Design and Management", duration: "100h, 2025" },
+  ],
+} as const;
+
+export const certifications = {
+  icon: '/assets/resume/badge.svg',
+  title: 'Certifications',
+  description: 'Continuous learning is the foundation of my practice. These recent specializations bridge technology, design, and business — keeping me at the intersection where value is created.',
+  items: [
+    { institution: "AIEP / Fundación Telefónica", degree: "Diploma in Web Design and UX/UI", duration: "90h, 2025" },
+    { institution: "AIEP / Fundación Telefónica", degree: "Diploma in Web Design and Programming", duration: "100h, 2025" },
+    { institution: "IPCHILE / Fundación Telefónica", degree: "Diploma in Entrepreneurship and Digital Management", duration: "90h, 2025" },
+    { institution: "Universidad Playa Ancha / Fundación Telefónica", degree: "Diploma in Agile Project Design and Management", duration: "100h, 2025" },
   ],
 } as const;
 
@@ -77,5 +90,9 @@ export const skills = {
     { icon: <FaLinux />, skillName: "Linux" },
     { icon: <FaJenkins />, skillName: "Jenkins" },
     { icon: <DiScrum />, skillName: "Scrum" },
+    { icon: <SiCloudflare />, skillName: "Cloudflare" },
+    { icon: <SiDrizzle />, skillName: "Drizzle ORM" },
+    { icon: <SiMercadopago />, skillName: "Mercado Pago" },
+    { icon: <SiFlask />, skillName: "Flask" },
   ],
 } as const;

@@ -4,19 +4,22 @@ import { motion } from "framer-motion";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Timeline from "@/components/Timeline";
 import SkillGroup from "@/components/SkillGroup";
-import { about, experience, education, skills } from "@/data/resume";
+import { about, experience, education, certifications, skills } from "@/data/resume";
 
 const frontendNames = new Set([
   "HTML 5", "CSS 3", "Javascript", "Typescript",
   "React", "Next.js", "Tailwind CSS", "Bootstrap",
 ]);
-const backendNames = new Set(["Python", "Postgresql", "Mysql"]);
+const backendNames = new Set([
+  "Python", "Postgresql", "Mysql", "Drizzle ORM", "Flask",
+]);
 const devopsNames = new Set([
-  "AWS", "EC2", "Vercel", "Heroku",
+  "AWS", "EC2", "Vercel", "Heroku", "Cloudflare",
   "GitHub Actions", "Jenkins", "Linux",
 ]);
 const toolsNames = new Set([
   "Git", "GitHub", "Figma", "Jira", "Sonarqube", "Scrum",
+  "Mercado Pago",
 ]);
 
 function toSkillGroupItems(names: Set<string>) {
@@ -44,6 +47,12 @@ const educationTimeline = education.items.map((item) => ({
   organization: item.institution,
 }));
 
+const certificationsTimeline = certifications.items.map((item) => ({
+  period: item.duration,
+  title: item.degree,
+  organization: item.institution,
+}));
+
 const ResumeClient = () => {
   return (
     <motion.div
@@ -62,6 +71,7 @@ const ResumeClient = () => {
           <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
             <TabsTrigger value="experience">Experience</TabsTrigger>
             <TabsTrigger value="education">Education</TabsTrigger>
+            <TabsTrigger value="certifications">Certifications</TabsTrigger>
             <TabsTrigger value="skills">Skills</TabsTrigger>
             <TabsTrigger value="about">About Me</TabsTrigger>
           </TabsList>
@@ -90,6 +100,19 @@ const ResumeClient = () => {
                   {education.description}
                 </p>
                 <Timeline items={educationTimeline} />
+              </div>
+            </TabsContent>
+
+            {/* ---- Certifications Tab ---- */}
+            <TabsContent value="certifications" className="w-full">
+              <div className="flex flex-col gap-[30px] text-center xl:text-left">
+                <h3 className="text-4xl font-serif font-bold text-foreground">
+                  {certifications.title}
+                </h3>
+                <p className="max-w-[600px] text-muted-foreground mx-auto xl:mx-0 leading-relaxed">
+                  {certifications.description}
+                </p>
+                <Timeline items={certificationsTimeline} />
               </div>
             </TabsContent>
 
