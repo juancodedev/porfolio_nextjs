@@ -11,6 +11,7 @@ import { motion } from "framer-motion";
 import { zodResolver } from "@hookform/resolvers/zod"
 import { FormSchema, type FormSchemaType, SERVICES, type ServiceType } from "@/lib/schema"
 import { useSearchParams } from "next/navigation";
+import { sendContactEmail } from "@/lib/actions/contact";
 
 const info = [
     {
@@ -56,23 +57,17 @@ const ContactForm: React.FC = () => {
         setError(null);
         setSuccess(null);
         setIsSubmitting(true);
-        const options = {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(dataForm),
-        }
-        const urlAPI = process.env.NEXT_PUBLIC_URL || 'http://localhost:3001/sql/agregar';
-        try {
-            const response = await fetch(urlAPI, options)
-            const resultJson = await response.json();
-            if (!response.ok) throw new Error(resultJson.message);
+
+        const result = await sendContactEmail(dataForm);
+
+        if (result.success) {
             reset();
-            setSuccess(resultJson.message || 'Message sent successfully!');
-        } catch (err: any) {
-            setError(err.message || 'Something went wrong. Please try again.');
-        } finally {
-            setIsSubmitting(false);
+            setSuccess(result.message);
+        } else {
+            setError(result.message);
         }
+
+        setIsSubmitting(false);
     }
 
     return (
