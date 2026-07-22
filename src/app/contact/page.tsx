@@ -12,6 +12,7 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { FormSchema, type FormSchemaType, SERVICES, type ServiceType } from "@/lib/schema"
 import { useSearchParams } from "next/navigation";
 import { sendContactEmail } from "@/lib/actions/contact";
+import { TurnstileWidget } from "@/components/TurnstileWidget";
 
 const info = [
     {
@@ -40,9 +41,10 @@ const ContactForm: React.FC = () => {
             },
         }
     )
+    const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
     const [isSubmitting, setIsSubmitting] = useState<boolean>(false)
     const [error, setError] = useState<string | null>(null);
-    const [success, setSuccess] = useState<string | null>(null)
+    const [success, setSuccess] = useState<string | null>(null);
 
     // Pre-select service from query param (e.g. coming from /services page)
     useEffect(() => {
@@ -56,12 +58,19 @@ const ContactForm: React.FC = () => {
     const sendDataAPI = async (dataForm: FormSchemaType) => {
         setError(null);
         setSuccess(null);
+
+        if (!turnstileToken) {
+            setError("Please complete the security check to verify you're not a bot.");
+            return;
+        }
+
         setIsSubmitting(true);
 
-        const result = await sendContactEmail(dataForm);
+        const result = await sendContactEmail({ ...dataForm, turnstileToken });
 
         if (result.success) {
             reset();
+            setTurnstileToken(null);
             setSuccess(result.message);
         } else {
             setError(result.message);
@@ -140,6 +149,14 @@ const ContactForm: React.FC = () => {
                     className="h-[200px]"
                     placeholder="Type your message here.."
                     {...register('message')}
+                />
+            </div>
+
+            {/* Turnstile anti-bot check */}
+            <div className="flex flex-col gap-1">
+                <TurnstileWidget
+                    siteKey="0x4AAAAAAD7e-vZweYFqBF1R"
+                    onVerify={setTurnstileToken}
                 />
             </div>
 
