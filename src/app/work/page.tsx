@@ -23,6 +23,14 @@ const Work = () => {
       className="min-h-[80vh] flex flex-col py-12"
     >
       <div className="container mx-auto max-w-[1200px] px-4 md:px-8">
+        {/* Page heading */}
+        <h1 className="text-4xl md:text-5xl font-serif font-bold text-foreground text-center mb-4">
+          My Projects
+        </h1>
+        <p className="text-lg text-muted-foreground text-center max-w-xl mx-auto mb-12">
+          Real-world applications and solutions I&apos;ve built across frontend, backend, and full stack.
+        </p>
+
         {/* Filter chips */}
         <div className="flex flex-wrap gap-3 mb-12 justify-center">
           {categories.map((cat) => (

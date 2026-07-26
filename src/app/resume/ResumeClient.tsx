@@ -64,6 +64,9 @@ const ResumeClient = () => {
       className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0"
     >
       <div className="container mx-auto">
+        <h1 className="text-4xl md:text-5xl font-serif font-bold text-foreground text-center xl:text-left mb-8">
+          Resume
+        </h1>
         <Tabs
           defaultValue="experience"
           className="flex flex-col xl:flex-row gap-[60px]"
@@ -80,9 +83,9 @@ const ResumeClient = () => {
             {/* ---- Experience Tab ---- */}
             <TabsContent value="experience" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-serif font-bold text-foreground">
+                <h2 className="text-4xl font-serif font-bold text-foreground">
                   {experience.title}
-                </h3>
+                </h2>
                 <p className="max-w-[600px] text-muted-foreground mx-auto xl:mx-0 leading-relaxed">
                   {experience.description}
                 </p>
@@ -93,9 +96,9 @@ const ResumeClient = () => {
             {/* ---- Education Tab ---- */}
             <TabsContent value="education" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-serif font-bold text-foreground">
+                <h2 className="text-4xl font-serif font-bold text-foreground">
                   {education.title}
-                </h3>
+                </h2>
                 <p className="max-w-[600px] text-muted-foreground mx-auto xl:mx-0 leading-relaxed">
                   {education.description}
                 </p>
@@ -106,9 +109,9 @@ const ResumeClient = () => {
             {/* ---- Certifications Tab ---- */}
             <TabsContent value="certifications" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-serif font-bold text-foreground">
+                <h2 className="text-4xl font-serif font-bold text-foreground">
                   {certifications.title}
-                </h3>
+                </h2>
                 <p className="max-w-[600px] text-muted-foreground mx-auto xl:mx-0 leading-relaxed">
                   {certifications.description}
                 </p>
@@ -120,9 +123,9 @@ const ResumeClient = () => {
             <TabsContent value="skills" className="w-full">
               <div className="flex flex-col gap-[30px]">
                 <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                  <h3 className="text-4xl font-serif font-bold text-foreground">
+                  <h2 className="text-4xl font-serif font-bold text-foreground">
                     {skills.title}
-                  </h3>
+                  </h2>
                   <p className="max-w-[600px] text-muted-foreground mx-auto xl:mx-0 leading-relaxed">
                     {skills.description}
                   </p>
@@ -142,9 +145,9 @@ const ResumeClient = () => {
             {/* ---- About Me Tab ---- */}
             <TabsContent value="about" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-serif font-bold text-foreground">
+                <h2 className="text-4xl font-serif font-bold text-foreground">
                   {about.title}
-                </h3>
+                </h2>
                 <div className="max-w-[640px] text-muted-foreground mx-auto xl:mx-0 leading-relaxed text-base space-y-5">
                   <p>{about.description}</p>
                   <p>

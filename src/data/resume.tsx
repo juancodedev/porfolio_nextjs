@@ -6,10 +6,11 @@ import {
 import { BiLogoPostgresql } from "react-icons/bi"
 import {
   SiTailwindcss, SiNextdotjs, SiTypescript,
-  SiHeroku, SiJira, SiSonarqubeserver, SiVercel,
+  SiJira, SiSonarqubeserver, SiVercel,
   SiMysql, SiGithubactions, SiCloudflare, SiDrizzle,
   SiMercadopago, SiFlask,
 } from "react-icons/si"
+import { GrHeroku } from "react-icons/gr"
 import { DiScrum } from "react-icons/di"
 import type { ReactNode } from "react"
 
@@ -83,7 +84,7 @@ export const skills = {
     { icon: <SiTypescript />, skillName: "Typescript" },
     { icon: <BiLogoPostgresql />, skillName: "Postgresql" },
     { icon: <SiMysql />, skillName: "Mysql" },
-    { icon: <SiHeroku />, skillName: "Heroku" },
+    { icon: <GrHeroku />, skillName: "Heroku" },
     { icon: <SiJira />, skillName: "Jira" },
     { icon: <SiSonarqubeserver />, skillName: "Sonarqube" },
     { icon: <SiVercel />, skillName: "Vercel" },
