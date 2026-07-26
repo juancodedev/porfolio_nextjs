@@ -5,7 +5,7 @@ import Image from "next/image"
 
 const Photo = () => {
     return (
-        <div className="w-full h-full relative">
+        <div className="w-full h-full">
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{
@@ -23,10 +23,11 @@ const Photo = () => {
                         src="/assets/new_profile.webp"
                         priority
                         quality={100}
-                        fill
-                        sizes="(max-width: 1280px) 300px, 460px"
+                        width={460}
+                        height={540}
                         alt="Juan Muñoz"
                         className="rounded-3xl object-cover object-top"
+                        style={{ width: '100%', height: '100%' }}
                         fetchPriority="high"
                     />
                 </div>
