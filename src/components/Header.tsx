@@ -7,10 +7,10 @@ const Header = () => {
     return (
         <header className="py-8 xl:py-12 text-foreground">
             <div className="container mx-auto flex justify-between items-center">
-                <Link href="/">
-                    <h1 className="text-4xl font-semibold">
+                <Link href="/" aria-label="Go to homepage">
+                    <span className="text-4xl font-semibold">
                         Juan<span className="text-accent">.</span>
-                    </h1>
+                    </span>
                 </Link>
                 {/* Desktop nav and CTA */}
                 <div className="hidden xl:flex items-center gap-8">

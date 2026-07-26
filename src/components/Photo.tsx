@@ -24,6 +24,7 @@ const Photo = () => {
                         priority
                         quality={100}
                         fill
+                        sizes="(max-width: 1280px) 300px, 460px"
                         alt="Juan Muñoz"
                         className="rounded-3xl object-cover object-top"
                         fetchPriority="high"

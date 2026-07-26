@@ -5,7 +5,7 @@ import Link from "next/link"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Home",
+  title: "Home - Full Stack Web Developer",
   description: "Juan Muñoz — 19 years in technology. Building software that solves real problems with Python, React, Next.js, and AWS.",
 }
 

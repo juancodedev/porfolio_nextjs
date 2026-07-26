@@ -93,9 +93,9 @@ const ContactForm: React.FC = () => {
                 </div>
             )}
 
-            <h3 className="text-4xl text-primary">Let&apos;s work together</h3>
+            <h1 className="text-4xl text-primary">Let&apos;s work together</h1>
             <p className="text-muted-foreground">
-                Let's combine our strengths to create something exceptional. Together, we can turn your ideas into reality, overcome challenges, and achieve your business goals. Reach out, and let's start building something great together.
+                Let&apos;s combine our strengths to create something exceptional. Together, we can turn your ideas into reality, overcome challenges, and achieve your business goals. Reach out, and let&apos;s start building something great together.
             </p>
 
             {/* inputs */}

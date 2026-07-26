@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import PageTransition from "@/components/PageTransition";
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import Script from "next/script"
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -39,6 +40,9 @@ export const metadata: Metadata = {
   keywords: ["Full Stack Developer", "Python", "JavaScript", "React", "Next.js", "AWS", "PostgreSQL", "Web Development", "Software Engineer", "Juan Muñoz"],
   authors: [{ name: "Juan Muñoz", url: "https://github.com/juancodedev" }],
   creator: "Juan Muñoz",
+  alternates: {
+    canonical: "https://www.juancodedev.dev",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -70,8 +74,10 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  // TODO: Add Google Search Console verification code
-  // verification: { google: "your-code" },
+  verification: {
+    // Get your verification code from Google Search Console and add it below
+    google: "0-XgaOFCJ-mGCf6F8eqk2J4L7lUB_qYzaabSy_N-vKQ",
+  },
 };
 
 export default function RootLayout({
@@ -88,6 +94,47 @@ export default function RootLayout({
         <PageTransition>
           {children}
         </PageTransition>
+        {/* JSON-LD Structured Data for rich snippets */}
+        <Script
+          id="schema-person"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Juan Muñoz",
+              givenName: "Juan",
+              familyName: "Muñoz",
+              url: "https://www.juancodedev.dev",
+              image: "https://www.juancodedev.dev/assets/new_profile.webp",
+              jobTitle: "Full Stack Developer",
+              description: "Full Stack Developer with 19 years in IT and 3+ years building modern web applications. Specialized in Python, React, Next.js, AWS, and cloud solutions.",
+              sameAs: [
+                "https://github.com/juancodedev",
+                "https://www.linkedin.com/in/juanshocl/",
+                "https://www.youtube.com/juanshocl",
+              ],
+              knowsAbout: ["Python", "JavaScript", "React", "Next.js", "AWS", "PostgreSQL", "TypeScript", "Web Development"],
+            }),
+          }}
+        />
+        <Script
+          id="schema-website"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "Juan Muñoz Portfolio",
+              url: "https://www.juancodedev.dev",
+              description: "Full Stack Developer portfolio showcasing web development projects and services.",
+              author: {
+                "@type": "Person",
+                name: "Juan Muñoz",
+              },
+            }),
+          }}
+        />
       </body>
     </html>
   );

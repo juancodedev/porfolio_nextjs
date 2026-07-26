@@ -38,6 +38,7 @@ const ServiceCard = ({
           aria-label={`Learn more about ${title}`}
         >
           <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-primary-foreground transition-colors" />
+          <span className="sr-only">Learn more about {title}</span>
         </Link>
       </div>
 
