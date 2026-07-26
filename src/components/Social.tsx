@@ -36,6 +36,7 @@ const Social: React.FC<SocialProps> = ({ containerStyles, iconStyles }) => {
                     )}
                 >
                     {item.icon}
+                    <span className="sr-only">{item.label}</span>
                 </Link>
             ))}
         </div>
