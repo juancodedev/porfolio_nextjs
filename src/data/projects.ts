@@ -117,7 +117,7 @@ export const allProjects: Project[] = [
       { name: 'GitHub Actions' },
     ],
     image: '/assets/work/IdeaLeadsHub.png',
-    live: '',
+    live: 'https://crm.juancode.dev/',
     github: 'https://github.com/juancodedev/idea-leads-hub',
   },
   {
@@ -138,7 +138,7 @@ export const allProjects: Project[] = [
       { name: 'PostgreSQL' },
     ],
     image: '/assets/work/VirtualCardPro.png',
-    live: 'https://v0-saa-s-virtual-id-cards.vercel.app',
+    live: 'https://codecard.juancode.dev/',
     github: 'https://github.com/juancodedev/v0-saa-s-virtual-id-cards',
   },
   {
@@ -158,7 +158,7 @@ export const allProjects: Project[] = [
       { name: 'Cloudflare Workers' },
     ],
     image: '/assets/work/AlbumWorldCup.png',
-    live: '',
+    live: 'http://album.juancode.dev/',
     github: 'https://github.com/juancodedev/album-world-cup',
   },
   {
