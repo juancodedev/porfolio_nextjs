@@ -6,7 +6,10 @@ import type { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Home - Full Stack Web Developer",
-  description: "Juan Muñoz — 19 years in technology. Building software that solves real problems with Python, React, Next.js, and AWS.",
+  description: "Juan Muñoz — Full Stack Developer with 4 years building production systems in Python, Django, React, Redux, PostgreSQL, and AWS Serverless.",
+  alternates: {
+    canonical: "/",
+  },
 }
 
 const Home = () => {
@@ -24,7 +27,7 @@ const Home = () => {
               <span className="text-primary">Muñoz</span>
             </h1>
             <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-8 max-w-[520px]">
-              19 years in technology. The last 3+ building software that solves real problems.
+              4 years building production software, after more than 15 in IT support.
             </p>
 
             {/* CTAs */}

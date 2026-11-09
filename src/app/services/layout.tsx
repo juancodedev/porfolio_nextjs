@@ -3,6 +3,9 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Web Development & Tech Consulting Services",
   description: "Professional web development services: Full Stack Development, Backend Solutions, Systems Integration, and Technology Consulting. Modern solutions for your business needs.",
+  alternates: {
+    canonical: "/services",
+  },
 }
 
 export default function ServicesLayout({

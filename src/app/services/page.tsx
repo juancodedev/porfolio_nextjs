@@ -25,7 +25,7 @@ const services = [
     num: "03",
     title: "Systems Integration",
     description:
-      "Your tools should talk to each other — not to your team. I connect CRMs, payment gateways, analytics, and third-party APIs into a single cohesive workflow. The result: data flows automatically, manual entry disappears, and your team spends time on decisions, not data entry.",
+      "Your tools should talk to each other — not to your team. I connect CRMs, analytics, and third-party APIs into a single cohesive workflow. The result: data flows automatically, manual entry disappears, and your team spends time on decisions, not data entry.",
     href: "/contact?service=Systems+Integration",
     icon: Workflow,
   },

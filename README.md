@@ -1,6 +1,6 @@
 # Juan Muñoz - Portfolio
 
-Portfolio personal de **Juan Muñoz**, Full Stack Developer especializado en Python, JavaScript, React, Next.js y AWS.  
+Portfolio personal de **Juan Muñoz**, Full Stack Developer especializado en Python, Django, React, Redux, PostgreSQL y AWS Serverless.  
 Construido con **Next.js 16** (App Router), **TypeScript** y **Tailwind CSS**.
 
 ## 🚀 Stack Tecnológico
@@ -81,7 +81,7 @@ src/
 
 ## 🌐 Dominio
 
-El sitio está desplegado en **[juancodedev.dev](https://www.juancodedev.dev)** con Vercel.  
+El sitio está desplegado en **[juancode.dev](https://www.juancode.dev)** con Vercel.  
 Metadata completa con Open Graph y Twitter Cards configurada.
 
 ## 📬 Contacto
