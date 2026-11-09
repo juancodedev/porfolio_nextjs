@@ -4,6 +4,8 @@ import { Resend } from "resend";
 import { FormSchema, type FormSchemaType } from "@/lib/schema";
 
 const WORKER_URL = "https://turnstile-siteverify-porfolio-nextjs.cl-jmunoz.workers.dev";
+const SEND_FAILED_MESSAGE =
+  "Your message could not be sent. Please email jmunoz@juancode.dev instead.";
 
 export async function sendContactEmail(
   data: FormSchemaType & { turnstileToken: string },
@@ -35,10 +37,11 @@ export async function sendContactEmail(
   }
 
   // Token is valid — proceed with email
-  const resend = new Resend(process.env.RESEND_API_KEY);
-
   try {
-    await resend.emails.send({
+    const resend = new Resend(process.env.RESEND_API_KEY);
+
+    // The SDK reports API failures in the result instead of throwing.
+    const { error } = await resend.emails.send({
       from: "Juan Muñoz <noreply@juancode.dev>",
       to: "jmunoz@juancode.dev",
       subject: `New Contact: ${validated.first_name} ${validated.last_name} — ${validated.services}`,
@@ -52,12 +55,14 @@ export async function sendContactEmail(
       ].join("\n"),
     });
 
+    if (error) {
+      console.error("Resend error:", error);
+      return { success: false, message: SEND_FAILED_MESSAGE };
+    }
+
     return { success: true, message: "Message sent successfully!" };
   } catch (error) {
     console.error("Resend error:", error);
-    return {
-      success: false,
-      message: "Something went wrong. Please try again.",
-    };
+    return { success: false, message: SEND_FAILED_MESSAGE };
   }
 }
