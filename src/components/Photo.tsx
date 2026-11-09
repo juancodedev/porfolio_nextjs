@@ -1,38 +1,16 @@
-"use client"
-
-import { motion } from "framer-motion"
 import Image from "next/image"
 
 const Photo = () => {
     return (
-        <div className="w-full h-full">
-            <motion.div
-                initial={{ opacity: 0 }}
-                animate={{
-                    opacity: 1,
-                    transition: {
-                        delay: 0.2,
-                        duration: 0.6,
-                        ease: "easeOut"
-                    },
-                }}
-            >
-                {/* Photo — rounded corners, no circular crop, clean on light background */}
-                <div className="w-[300px] h-[360px] xl:w-[460px] xl:h-[540px] relative">
-                    <Image
-                        src="/assets/new_profile.webp"
-                        priority
-                        quality={100}
-                        width={460}
-                        height={540}
-                        alt="Juan Muñoz"
-                        className="rounded-3xl object-cover object-top"
-                        style={{ width: '100%', height: '100%' }}
-                        fetchPriority="high"
-                    />
-                </div>
-            </motion.div>
-        </div>
+        <Image
+            src="/assets/new_profile.webp"
+            priority
+            width={260}
+            height={312}
+            sizes="(min-width: 1024px) 260px, 200px"
+            alt="Juan Muñoz"
+            className="h-[240px] w-[200px] rounded-2xl object-cover object-top lg:h-[312px] lg:w-[260px]"
+        />
     )
 }
 
