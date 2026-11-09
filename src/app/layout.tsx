@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { JetBrains_Mono, Inter, Source_Serif_4 } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
-import PageTransition from "@/components/PageTransition";
+import Footer from "@/components/Footer";
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import Script from "next/script"
@@ -96,7 +96,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-NMR8WGWX');`,
           }}
         />
-      <body className={`${jetbrainsMono.variable} ${inter.variable} ${sourceSerif4.variable}`}>
+      <body className={`${jetbrainsMono.variable} ${inter.variable} ${sourceSerif4.variable} flex min-h-screen flex-col`}>
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
@@ -109,10 +109,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         <SpeedInsights />
         <Analytics />
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-background focus:px-4 focus:py-2 focus:text-primary"
+        >
+          Skip to content
+        </a>
         <Header />
-        <PageTransition>
+        <main id="main" className="flex-1">
           {children}
-        </PageTransition>
+        </main>
+        <Footer />
         {/* JSON-LD Structured Data for rich snippets */}
         <Script
           id="schema-person"

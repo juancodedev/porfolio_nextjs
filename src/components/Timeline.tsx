@@ -1,7 +1,3 @@
-"use client"
-
-import { motion } from "framer-motion"
-
 interface TimelineItem {
   period: string
   title: string
@@ -24,14 +20,7 @@ const Timeline = ({ items }: TimelineProps) => {
 
       <ul className="flex flex-col gap-8">
         {items.map((item, index) => (
-          <motion.li
-            key={index}
-            whileInView={{ opacity: 1, x: 0 }}
-            initial={{ opacity: 0, x: -10 }}
-            transition={{ duration: 0.4, delay: index * 0.1, ease: "easeOut" }}
-            viewport={{ once: true }}
-            className="relative pl-10"
-          >
+          <li key={index} className="relative pl-10">
             {/* Dot */}
             <div
               className="absolute left-0 top-1.5 w-[22px] h-[22px] rounded-full border-2 border-primary bg-background flex items-center justify-center"
@@ -42,12 +31,12 @@ const Timeline = ({ items }: TimelineProps) => {
 
             {/* Content */}
             <div className="flex flex-col gap-1">
-              <span className="text-xs font-mono text-primary uppercase tracking-wider">
+              <span className="text-sm text-muted-foreground">
                 {item.period}
               </span>
-              <h4 className="text-lg font-serif font-semibold text-foreground leading-snug">
+              <h3 className="text-lg font-serif font-semibold text-foreground leading-snug">
                 {item.title}
-              </h4>
+              </h3>
               <p className="text-sm text-muted-foreground">
                 {item.organization}
               </p>
@@ -57,7 +46,7 @@ const Timeline = ({ items }: TimelineProps) => {
                 </p>
               )}
             </div>
-          </motion.li>
+          </li>
         ))}
       </ul>
     </div>

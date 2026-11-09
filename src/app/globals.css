@@ -4,39 +4,53 @@
 
 @layer base {
   :root {
+    color-scheme: light;
     --background: 60 9% 98%;
     --foreground: 0 0% 10%;
     --card: 0 0% 100%;
     --card-foreground: 0 0% 10%;
-    --primary: 175 84% 32%;
+    --primary: 175 80% 26%;
     --primary-foreground: 0 0% 100%;
     --secondary: 60 5% 96%;
     --secondary-foreground: 0 0% 10%;
     --muted: 60 5% 96%;
     --muted-foreground: 33 5% 42%;
-    --accent: 175 84% 32%;
+    --accent: 175 80% 26%;
     --accent-foreground: 0 0% 100%;
-    --accent-hover: 175 80% 26%;
+    --accent-hover: 175 80% 20%;
     --border: 24 6% 90%;
     --input: 24 6% 90%;
-    --ring: 175 84% 32%;
+    --ring: 175 80% 26%;
     --radius: 0.5rem;
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 10%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
+    --panel: 175 55% 14%;
+    --panel-foreground: 60 9% 96%;
   }
 
   body {
-    @apply bg-background text-foreground leading-loose;
+    @apply bg-background text-foreground leading-relaxed;
     font-family: var(--font-inter), system-ui, sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-source-serif), Georgia, serif;
+    text-wrap: balance;
   }
 
   code, pre, kbd, samp {
     font-family: var(--font-jetbrainsMono), monospace;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 }

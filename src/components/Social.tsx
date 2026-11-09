@@ -31,7 +31,7 @@ const Social: React.FC<SocialProps> = ({ containerStyles, iconStyles }) => {
                     rel="noopener noreferrer"
                     aria-label={item.label}
                     className={cn(
-                        "w-9 h-9 border border-primary/30 rounded-full flex justify-center items-center text-primary text-base hover:bg-primary hover:text-primary-foreground transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
+                        "w-11 h-11 border border-primary/30 rounded-full flex justify-center items-center text-primary text-base hover:bg-primary hover:text-primary-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
                         iconStyles
                     )}
                 >

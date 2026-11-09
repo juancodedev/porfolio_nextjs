@@ -24,10 +24,10 @@ export const experience = {
   title: 'My experience',
   description: "Across two decades in technology, I have built systems as a developer, solved problems as a technical support engineer, and shared knowledge as a university instructor. Each role has sharpened a different edge of my craft — from an AWS serverless pipeline (Lambda, Step Functions, S3, Textract, API Gateway) that cut calculation and data delivery from 1.5 days to about 20 minutes, to implementing Chile's pension reform on a legacy Django payroll platform.",
   items: [
-    { company: "HCMFront, Santiago", position: "Full Stack Developer", duration: "2024-Oct. → Today." },
-    { company: "BST Corp., Santiago", position: "Full Stack Developer", duration: "2021-Dec. → 2024-Mar." },
-    { company: "DUOC UC, Maipú", position: "Web & Mobile Development Instructor", duration: "2023-Mar. → 2023-Ago." },
-    { company: "Quintec Chile S.A.", position: "Technical Support", duration: "2003, May. → 2018, Mar." },
+    { company: "HCMFront, Santiago", position: "Full Stack Developer", duration: "Oct 2024 – Present" },
+    { company: "BST Corp., Santiago", position: "Full Stack Developer", duration: "Dec 2021 – Mar 2024" },
+    { company: "DUOC UC, Maipú", position: "Web & Mobile Development Instructor", duration: "Mar 2023 – Aug 2023" },
+    { company: "Quintec Chile S.A.", position: "Technical Support", duration: "May 2003 – Mar 2018" },
   ],
 } as const;
 
@@ -38,10 +38,6 @@ export const education = {
   items: [
     { institution: "DUOC UC, Santiago", degree: "Computer Engineering", duration: "2021" },
     { institution: "DUOC UC, Santiago", degree: "Network Management Technician", duration: "2010" },
-    { institution: "AIEP/Sense y Fundacion Telefonica", degree: "Diploma in Web Design and User Experience (UX/UI)", duration: "90h, 2025" },
-    { institution: "AIEP/Sense y Fundacion Telefonica", degree: "Diploma in Web Design and Programming", duration: "100h, 2025" },
-    { institution: "IPCHILE/Sense y Fundacion Telefonica", degree: "Diploma in Entrepreneurship and Digital Management", duration: "90h, 2025" },
-    { institution: "Universidad Playa Ancha/Sense y Fundacion Telefonica", degree: "Diploma in Agile Project Design and Management", duration: "100h, 2025" },
   ],
 } as const;
 
