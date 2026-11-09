@@ -7,7 +7,6 @@ import { Select, SelectGroup, SelectTrigger, SelectValue, SelectContent, SelectL
 import { Textarea } from "@/components/ui/textarea";
 import { useForm, Controller } from 'react-hook-form'
 import { FaEnvelope } from "react-icons/fa";
-import { motion } from "framer-motion";
 import { zodResolver } from "@hookform/resolvers/zod"
 import { FormSchema, type FormSchemaType, SERVICES, type ServiceType } from "@/lib/schema"
 import { useSearchParams } from "next/navigation";
@@ -83,50 +82,50 @@ const ContactForm: React.FC = () => {
         <form className="flex flex-col gap-6 p-10 bg-card border border-border rounded-xl" onSubmit={handleSubmit(sendDataAPI)}>
             {/* Feedback messages */}
             {error && (
-                <div className="flex items-center gap-2 bg-red-500/10 border border-red-500/30 text-red-600 px-4 py-3 rounded-lg text-sm">
+                <div role="alert" className="flex items-center gap-2 bg-red-500/10 border border-red-500/30 text-red-600 px-4 py-3 rounded-lg text-sm">
                     <span>⚠</span> {error}
                 </div>
             )}
             {success && (
-                <div className="flex items-center gap-2 bg-primary/10 border border-primary/30 text-primary px-4 py-3 rounded-lg text-sm">
+                <div role="status" className="flex items-center gap-2 bg-primary/10 border border-primary/30 text-primary px-4 py-3 rounded-lg text-sm">
                     <span>✓</span> {success}
                 </div>
             )}
 
-            <h1 className="text-4xl text-primary">Let&apos;s work together</h1>
+            <h1 className="text-4xl font-bold text-foreground">Let&apos;s work together</h1>
             <p className="text-muted-foreground">
-                Let&apos;s combine our strengths to create something exceptional. Together, we can turn your ideas into reality, overcome challenges, and achieve your business goals. Reach out, and let&apos;s start building something great together.
+                Tell me about the project or role, and I&apos;ll reply by email.
             </p>
 
             {/* inputs */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="flex flex-col gap-1">
-                    <label htmlFor="first_name" className="sr-only">First name</label>
-                    <Input type="text" placeholder="Firstname" id="first_name" {...register('first_name')} />
+                    <label htmlFor="first_name" className="text-sm font-medium text-foreground">First name</label>
+                    <Input type="text" autoComplete="given-name" id="first_name" {...register('first_name')} />
                     {errors.first_name && <p className="text-sm text-red-600">{errors.first_name.message}</p>}
                 </div>
                 <div className="flex flex-col gap-1">
-                    <label htmlFor="last_name" className="sr-only">Last name</label>
-                    <Input type="text" placeholder="Lastname" id="last_name" {...register("last_name")} />
+                    <label htmlFor="last_name" className="text-sm font-medium text-foreground">Last name</label>
+                    <Input type="text" autoComplete="family-name" id="last_name" {...register("last_name")} />
                     {errors.last_name && <p className="text-sm text-red-600">{errors.last_name.message}</p>}
                 </div>
                 <div className="flex flex-col gap-1">
-                    <label htmlFor="email_address" className="sr-only">Email address</label>
-                    <Input type="email" placeholder="Email address" id="email_address" {...register('email_address')} />
+                    <label htmlFor="email_address" className="text-sm font-medium text-foreground">Email address</label>
+                    <Input type="email" autoComplete="email" spellCheck={false} id="email_address" {...register('email_address')} />
                     {errors.email_address && <p className="text-sm text-red-600">{errors.email_address.message}</p>}
                 </div>
             </div>
 
             {/* select */}
             <div className="flex flex-col gap-1">
-                <label htmlFor="services-select" className="sr-only">Select a service</label>
+                <label htmlFor="services-select" className="text-sm font-medium text-foreground">Select a service</label>
                 <Controller
                     name="services"
                     control={control}
                     render={({ field }) => (
                         <Select value={field.value} onValueChange={field.onChange}>
                             <SelectTrigger className="w-full" id="services-select">
-                                <SelectValue placeholder="Select a Service" />
+                                <SelectValue placeholder="Choose a service…" />
                             </SelectTrigger>
                             <SelectContent>
                                 <SelectGroup>
@@ -139,17 +138,18 @@ const ContactForm: React.FC = () => {
                         </Select>
                     )}
                 />
+                {errors.services && <p className="text-sm text-red-600">{errors.services.message}</p>}
             </div>
 
             {/* textarea */}
             <div className="flex flex-col gap-1">
-                <label htmlFor="message" className="sr-only">Your message</label>
+                <label htmlFor="message" className="text-sm font-medium text-foreground">Your message</label>
                 <Textarea
                     id="message"
                     className="h-[200px]"
-                    placeholder="Type your message here.."
                     {...register('message')}
                 />
+                {errors.message && <p className="text-sm text-red-600">{errors.message.message}</p>}
             </div>
 
             {/* Turnstile anti-bot check */}
@@ -166,7 +166,7 @@ const ContactForm: React.FC = () => {
                 type="submit"
                 disabled={isSubmitting}
             >
-                {isSubmitting ? 'Sending...' : 'Send message'}
+                {isSubmitting ? 'Sending…' : 'Send message'}
             </Button>
         </form>
     );
@@ -175,19 +175,12 @@ const ContactForm: React.FC = () => {
 // Page component wraps inner form in Suspense (required for useSearchParams in Next.js)
 const Contact: React.FC = () => {
     return (
-        <motion.section
-            initial={{ opacity: 0 }}
-            animate={{
-                opacity: 1,
-                transition: { delay: 0, duration: 0.2, ease: "easeOut" },
-            }}
-            className="py-6"
-        >
+        <section className="py-6">
             <div className="container mx-auto">
                 <div className="flex flex-col xl:flex-row gap-[30px]">
                     {/* form */}
                     <div className="xl:w-[54%] order-2 xl:order-none">
-                        <Suspense fallback={<div className="text-muted-foreground text-sm">Loading form...</div>}>
+                        <Suspense fallback={<div className="text-muted-foreground text-sm">Loading form…</div>}>
                             <ContactForm />
                         </Suspense>
                     </div>
@@ -210,7 +203,7 @@ const Contact: React.FC = () => {
                     </div>
                 </div>
             </div>
-        </motion.section>
+        </section>
     )
 }
 

@@ -1,6 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { cvPath } from "@/lib/navigation";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Timeline from "@/components/Timeline";
 import SkillGroup from "@/components/SkillGroup";
@@ -54,18 +56,16 @@ const certificationsTimeline = certifications.items.map((item) => ({
 
 const ResumeClient = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{
-        opacity: 1,
-        transition: { delay: 0.5, duration: 0.4, ease: "easeIn" },
-      }}
-      className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0"
-    >
+    <section className="py-12">
       <div className="container mx-auto">
-        <h1 className="text-4xl md:text-5xl font-serif font-bold text-foreground text-center xl:text-left mb-8">
-          Resume
-        </h1>
+        <div className="flex flex-col items-center gap-4 mb-10 sm:flex-row sm:justify-between">
+          <h1 className="text-4xl md:text-5xl font-serif font-bold text-foreground">
+            Resume
+          </h1>
+          <Button variant="outline" asChild>
+            <Link href={cvPath} download>Download CV</Link>
+          </Button>
+        </div>
         <Tabs
           defaultValue="experience"
           className="flex flex-col xl:flex-row gap-[60px]"
@@ -176,7 +176,7 @@ const ResumeClient = () => {
           </div>
         </Tabs>
       </div>
-    </motion.div>
+    </section>
   );
 };
 

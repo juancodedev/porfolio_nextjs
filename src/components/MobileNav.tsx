@@ -12,7 +12,7 @@ const MobileNav = () => {
 
     return (
         <Sheet open={open} onOpenChange={setOpen}>
-            <SheetTrigger className="flex justify-center items-center" aria-label="Open menu">
+            <SheetTrigger className="flex min-h-11 min-w-11 justify-center items-center" aria-label="Open menu">
                 <CiMenuFries className="text-[32px] text-accent" />
             </SheetTrigger>
             <SheetContent className="flex flex-col text-foreground">
@@ -23,16 +23,17 @@ const MobileNav = () => {
                         </span>
                     </Link>
                 </div>
-                <nav className="flex flex-col justify-center items-center gap-8">
+                <nav aria-label="Main navigation" className="flex flex-col justify-center items-center gap-8">
                     {navLinks.map((link, index) => (
                         <Link
                             href={link.path}
                             key={index}
                             onClick={() => setOpen(false)}
+                            aria-current={link.path === pathname ? "page" : undefined}
                             className={`${link.path === pathname
                                     ? "text-accent border-b-2 border-accent"
                                     : "text-foreground"
-                                } text-xl capitalize hover:text-accent transition-all`}
+                                } text-xl capitalize hover:text-accent transition-colors`}
                         >
                             {link.name}
                         </Link>
