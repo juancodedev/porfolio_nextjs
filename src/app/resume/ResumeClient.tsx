@@ -8,18 +8,17 @@ import { about, experience, education, certifications, skills } from "@/data/res
 
 const frontendNames = new Set([
   "HTML 5", "CSS 3", "Javascript", "Typescript",
-  "React", "Next.js", "Tailwind CSS", "Bootstrap",
+  "React", "Redux", "Next.js", "Tailwind CSS", "Bootstrap",
 ]);
 const backendNames = new Set([
-  "Python", "Postgresql", "Mysql", "Drizzle ORM", "Flask",
+  "Python", "Django", "Postgresql", "Mysql", "Drizzle ORM",
 ]);
 const devopsNames = new Set([
-  "AWS", "EC2", "Vercel", "Heroku", "Cloudflare",
+  "AWS", "AWS Step Functions", "EC2", "Vercel", "Heroku", "Cloudflare",
   "GitHub Actions", "Jenkins", "Linux",
 ]);
 const toolsNames = new Set([
   "Git", "GitHub", "Figma", "Jira", "Sonarqube", "Scrum",
-  "Mercado Pago",
 ]);
 
 function toSkillGroupItems(names: Set<string>) {

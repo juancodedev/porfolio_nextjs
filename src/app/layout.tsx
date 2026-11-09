@@ -31,24 +31,21 @@ const sourceSerif4 = Source_Serif_4({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.juancodedev.dev"),
+  metadataBase: new URL("https://www.juancode.dev"),
   title: {
     default: "Juan Muñoz - Full Stack Developer Portfolio",
     template: "%s | Juan Muñoz"
   },
-  description: "Full Stack Developer with 19 years in IT and 3+ years building modern web applications. Specialized in Python, React, Next.js, AWS, and cloud solutions.",
-  keywords: ["Full Stack Developer", "Python", "JavaScript", "React", "Next.js", "AWS", "PostgreSQL", "Web Development", "Software Engineer", "Juan Muñoz"],
+  description: "Full Stack Developer with 4 years building production systems in Python, Django, React, Redux, PostgreSQL, and AWS Serverless. HCM and payroll SaaS experience in Chile and Ecuador.",
+  keywords: ["Full Stack Developer", "Python", "Django", "JavaScript", "React", "Redux", "Next.js", "AWS", "AWS Serverless", "PostgreSQL", "HCM", "Payroll", "Web Development", "Software Engineer", "Juan Muñoz"],
   authors: [{ name: "Juan Muñoz", url: "https://github.com/juancodedev" }],
   creator: "Juan Muñoz",
-  alternates: {
-    canonical: "https://www.juancodedev.dev",
-  },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://www.juancodedev.dev",
+    url: "https://www.juancode.dev",
     title: "Juan Muñoz - Full Stack Developer Portfolio",
-    description: "Full Stack Developer with 19 years in IT and 3+ years building modern applications. Python, React, Next.js, AWS.",
+    description: "Full Stack Developer with 4 years building production systems in Python, Django, React, Redux, PostgreSQL, and AWS Serverless. HCM and payroll SaaS experience in Chile and Ecuador.",
     siteName: "Juan Muñoz Portfolio",
     images: [{
       url: "/profile.png",
@@ -60,7 +57,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Juan Muñoz - Full Stack Developer Portfolio",
-    description: "Full Stack Developer specializing in Python, JavaScript, React, Next.js, and AWS.",
+    description: "Full Stack Developer specializing in Python, Django, React, Redux, PostgreSQL, and AWS Serverless.",
     images: ["/profile.png"]
   },
   robots: {
@@ -127,10 +124,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               name: "Juan Muñoz",
               givenName: "Juan",
               familyName: "Muñoz",
-              url: "https://www.juancodedev.dev",
-              image: "https://www.juancodedev.dev/assets/new_profile.webp",
+              url: "https://www.juancode.dev",
+              image: "https://www.juancode.dev/assets/new_profile.webp",
               jobTitle: "Full Stack Developer",
-              description: "Full Stack Developer with 19 years in IT and 3+ years building modern web applications. Specialized in Python, React, Next.js, AWS, and cloud solutions.",
+              description: "Full Stack Developer with 4 years building production systems in Python, Django, React, Redux, PostgreSQL, and AWS Serverless. HCM and payroll SaaS experience in Chile and Ecuador.",
               sameAs: [
                 "https://github.com/juancodedev",
                 "https://www.linkedin.com/in/juanshocl/",
@@ -148,7 +145,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               "@context": "https://schema.org",
               "@type": "WebSite",
               name: "Juan Muñoz Portfolio",
-              url: "https://www.juancodedev.dev",
+              url: "https://www.juancode.dev",
               description: "Full Stack Developer portfolio showcasing web development projects and services.",
               author: {
                 "@type": "Person",

@@ -18,7 +18,7 @@ export const allProjects: Project[] = [
     category: 'fullstack',
     title: 'Quilver CRM — Archery Club Hub',
     description:
-      'Running an archery club means juggling memberships, training sessions, scores, and attendance — all with different roles. This SaaS platform brought everything into one place: QR check-in with GPS validation (Haversine algorithm) to prevent fake remote mark-ins, Mercado Pago subscriptions across 3 plans, and real-time dashboards. Built with 26 routes and 75 SQL migrations.',
+      'Running an archery club means juggling memberships, training sessions, scores, and attendance — all with different roles. This SaaS platform brought everything into one place: QR check-in with GPS validation (Haversine algorithm) to prevent fake remote mark-ins and real-time dashboards. Built with 26 routes and 75 SQL migrations.',
     stack: [
       { name: 'React' },
       { name: 'TypeScript' },
@@ -30,7 +30,6 @@ export const allProjects: Project[] = [
       { name: 'React Router' },
       { name: 'Recharts' },
       { name: 'Zod' },
-      { name: 'Mercado Pago' },
     ],
     image: '/assets/work/QuilverCRM.png',
     live: 'https://quiverapp.juancode.dev/',
@@ -125,7 +124,7 @@ export const allProjects: Project[] = [
     category: 'fullstack',
     title: 'VirtualCard Pro — Digital ID SaaS',
     description:
-      'Paper business cards are forgotten; virtual ID cards are always in your customer\'s pocket. VirtualCard Pro is a production SaaS with Stripe-powered subscriptions across 4 pricing plans, NextAuth authentication, and Prisma-backed PostgreSQL. Real-time usage analytics via Recharts let businesses see exactly how their cards perform.',
+      'Paper business cards are forgotten; virtual ID cards are always in your customer\'s pocket. VirtualCard Pro is a SaaS with NextAuth authentication and Prisma-backed PostgreSQL. Real-time usage analytics via Recharts let businesses see exactly how their cards perform.',
     stack: [
       { name: 'Next.js' },
       { name: 'TypeScript' },
@@ -133,7 +132,6 @@ export const allProjects: Project[] = [
       { name: 'Shadcn/ui' },
       { name: 'Prisma' },
       { name: 'NextAuth' },
-      { name: 'Stripe' },
       { name: 'Recharts' },
       { name: 'PostgreSQL' },
     ],
@@ -166,7 +164,7 @@ export const allProjects: Project[] = [
     category: 'fullstack',
     title: 'Wootric SaaS — Multi-Tenant Platform',
     description:
-      'True multi-tenancy is one of the hardest architectural problems in SaaS. Wootric was built from the ground up with Next.js 16, Cloudflare Workers, and Supabase — completing 18 development stages. It features an 11-step authentication middleware (JWT, rate limiting, CSRF, RBAC, feature flags, quota check, audit log), 3 decoupled workers via Cloudflare Queues (Excel/PDF export to R2, sync, Stripe webhooks), and a role-based access system with 19 permissions across 4 roles.',
+      'True multi-tenancy is one of the hardest architectural problems in SaaS. Wootric was built from the ground up with Next.js 16, Cloudflare Workers, and Supabase — completing 18 development stages. It features an 11-step authentication middleware (JWT, rate limiting, CSRF, RBAC, feature flags, quota check, audit log), decoupled workers via Cloudflare Queues (Excel/PDF export to R2 and sync), and a role-based access system with 19 permissions across 4 roles.',
     stack: [
       { name: 'Next.js' },
       { name: 'TypeScript' },
@@ -176,7 +174,6 @@ export const allProjects: Project[] = [
       { name: 'Cloudflare Queues' },
       { name: 'Supabase' },
       { name: 'Drizzle ORM' },
-      { name: 'Stripe' },
       { name: 'Tailwind CSS' },
     ],
     image: '/assets/work/Wootric.png',
