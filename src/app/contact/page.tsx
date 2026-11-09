@@ -65,17 +65,21 @@ const ContactForm: React.FC = () => {
 
         setIsSubmitting(true);
 
-        const result = await sendContactEmail({ ...dataForm, turnstileToken });
+        try {
+            const result = await sendContactEmail({ ...dataForm, turnstileToken });
 
-        if (result.success) {
-            reset();
-            setTurnstileToken(null);
-            setSuccess(result.message);
-        } else {
-            setError(result.message);
+            if (result.success) {
+                reset();
+                setTurnstileToken(null);
+                setSuccess(result.message);
+            } else {
+                setError(result.message);
+            }
+        } catch {
+            setError("Your message could not be sent. Please email jmunoz@juancode.dev instead.");
+        } finally {
+            setIsSubmitting(false);
         }
-
-        setIsSubmitting(false);
     }
 
     return (
