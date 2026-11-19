@@ -7,8 +7,8 @@ import Link from "next/link"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Home - Full Stack Web Developer",
-  description: "Juan Muñoz — Full Stack Developer with 4 years building production systems in Python, Django, React, Redux, PostgreSQL, and AWS Serverless.",
+  title: { absolute: "Juan Muñoz | Full Stack Developer · Python, Django, React" },
+  description: "Full Stack Developer with 4 years building production systems in Python, Django, React, PostgreSQL and AWS. HCM and payroll SaaS in Chile and Ecuador.",
   alternates: {
     canonical: "/",
   },
