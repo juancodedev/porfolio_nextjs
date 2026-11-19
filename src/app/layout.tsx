@@ -34,7 +34,8 @@ const SITE_URL = "https://www.juancode.dev";
 const SITE_TITLE = "Juan Muñoz | Full Stack Developer · Python, Django, React";
 const SITE_DESCRIPTION =
   "Full Stack Developer with 4 years building production systems in Python, Django, React, PostgreSQL and AWS. HCM and payroll SaaS in Chile and Ecuador.";
-const X_HANDLE = "@juancodedev";
+// X/Twitter handle: disabled for now. Uncomment this and the site/creator lines in `twitter` to enable.
+// const X_HANDLE = "@juancodedev";
 
 export const viewport: Viewport = {
   themeColor: [
@@ -70,8 +71,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: X_HANDLE,
-    creator: X_HANDLE,
+    // site: X_HANDLE,
+    // creator: X_HANDLE,
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
     images: [{
