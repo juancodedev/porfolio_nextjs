@@ -48,9 +48,10 @@ export const metadata: Metadata = {
     description: "Full Stack Developer with 4 years building production systems in Python, Django, React, Redux, PostgreSQL, and AWS Serverless. HCM and payroll SaaS experience in Chile and Ecuador.",
     siteName: "Juan Muñoz Portfolio",
     images: [{
-      url: "/profile.png",
+      url: "/og-image.jpg",
       width: 1200,
       height: 630,
+      type: "image/jpeg",
       alt: "Juan Muñoz - Full Stack Developer"
     }]
   },
@@ -58,7 +59,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Juan Muñoz - Full Stack Developer Portfolio",
     description: "Full Stack Developer specializing in Python, Django, React, Redux, PostgreSQL, and AWS Serverless.",
-    images: ["/profile.png"]
+    images: [{
+      url: "/og-image.jpg",
+      alt: "Juan Muñoz - Full Stack Developer"
+    }]
   },
   robots: {
     index: true,
